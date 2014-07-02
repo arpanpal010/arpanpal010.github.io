@@ -3,9 +3,9 @@
 
 body {
   padding:50px;
-  font:14px/1.5 "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 "Roboto+Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
-  font-weight:300;
+  font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,6 +28,7 @@ h1, h2, h3 {
 h1 {
   font:30px/1.5 "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size:28px;
+  font-weight: 700;
 }
 
 h2 {
