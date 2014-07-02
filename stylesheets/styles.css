@@ -1,8 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 
 body {
   padding:50px;
-  font:14px/1.5 Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:300;
 }
@@ -25,6 +26,7 @@ h1, h2, h3 {
 }
 
 h1 {
+  font:30px/1.5 "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size:28px;
 }
 
@@ -55,16 +57,22 @@ a small {
   width:85%;
   margin:0 auto;
 }
+
+.navbar {
+  /* nothing here so far */
+}
+
 .nav {
-	/*background: #F1F1F1;*/
-	font-size: 13px;
-	padding: 3px;
-	border-radius: 3px;
-	border: 1px solid #B5B5B5;
+  background: #FFF;
+  font-size: 16px;
+  padding: 3px;
+  margin-bottom:5px;
+  border-radius: 3px;
+  border: 1px solid #B5B5B5;
 }
 .nav:hover {
-	background: #585858;
-	color: #fff;
+  background: #585858;
+  color: #fff;
 }
 
 blockquote {
@@ -186,7 +194,7 @@ section {
 }
 
 section pre {
-	background: #E4E4E4; /*#f8f8f8*/
+  background: #E4E4E4; /*#f8f8f8*/
 }
 
 small {
@@ -208,27 +216,34 @@ footer {
   bottom:50px;
 }
 
-@media print, screen and (max-width: 1180px) {
-	.nav {
-		font-size: 11px;
-	}
-}
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
     width:auto;
     margin:0;
   }
-  
-  .nav {
-		font-size: 13px;
-	}
-  
+    
   header, section, footer {
     float:none;
     position:static;
     width:auto;
   }
+
+  .navbar {
+	top:0;
+	right:0;
+	width:95%;
+	position: fixed;
+	margin-top:5px;
+	margin-right:10px;
+	/*background: #C8C8C8;*/
+  }
+  
+  .nav{
+	float:none;
+    font-size: 16px;
+  }
+
 
   section {
     border:1px solid #e5e5e5;
