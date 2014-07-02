@@ -2,4 +2,4 @@
 *.bkp
 
 #anything in /ignoredir
-ignoredir/
+ignore-dir/
