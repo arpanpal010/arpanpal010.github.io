@@ -1,0 +1,5 @@
+#all .bkp files
+*.bkp
+
+#anything in /ignoredir
+ignoredir/
