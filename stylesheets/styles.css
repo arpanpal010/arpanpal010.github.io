@@ -1,16 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 body {
   padding:50px;
-  font:14px/1.5 "Roboto+Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font:14px/1.5 "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#777;
   font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin:0 0 20px;
 }
 
 p, ul, ol, table, pre, dl {
@@ -18,7 +18,7 @@ p, ul, ol, table, pre, dl {
 }
 
 p {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 h1, h2, h3 {
@@ -29,14 +29,20 @@ h1 {
   font:30px/1.5 "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size:28px;
   font-weight: 700;
+  margin:0 0 20px;
 }
 
 h2 {
+  font:26px/1.5 "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#393939;
+  margin: 0 0 3px;
 }
 
 h3, h4, h5, h6 {
+  margin:0 0 20px;
+  margin-left: 30px;
   color:#494949;
+  text-decoration: underline;
 }
 
 a {
@@ -52,30 +58,6 @@ a small {
   display:block;
 }
 
-/* classes */
-
-.wrapper {
-  width:85%;
-  margin:0 auto;
-}
-
-.navbar {
-  /* nothing here so far */
-}
-
-.nav {
-  background: #FFF;
-  font-size: 16px;
-  padding: 3px;
-  margin-bottom:5px;
-  border-radius: 3px;
-  border: 1px solid #B5B5B5;
-}
-.nav:hover {
-  background: #585858;
-  color: #fff;
-}
-
 blockquote {
   border-left:1px solid #e5e5e5;
   margin:0;
@@ -86,7 +68,7 @@ blockquote {
 code, pre {
   font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color:#333;
-  font-size:12px;
+  font-size:13px;
 }
 
 pre {
@@ -217,6 +199,40 @@ footer {
   bottom:50px;
 }
 
+/* classes */
+
+.wrapper {
+  width:85%;
+  margin:0 auto;
+}
+
+/*center deprecated*/
+.center {
+  text-align: center;
+}
+
+.navbar {
+  /* nothing here so far */
+}
+
+.nav {
+  background: #FFF;
+  font-size: 16px;
+  padding: 3px;
+  margin-bottom:5px;
+  border-radius: 6px;
+  border: 1px solid #B5B5B5;
+}
+.nav:hover {
+  background: #3A3535;
+  color: #fff;
+}
+
+.anchor {
+  padding-top: 30px;
+  /*visibility: hidden;*/
+}
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
@@ -236,15 +252,10 @@ footer {
 	width:95%;
 	position: fixed;
 	margin-top:5px;
-	margin-right:10px;
+	margin-right:15px;
+	margin-bottom: 100px;
 	/*background: #C8C8C8;*/
   }
-  
-  .nav{
-	float:none;
-    font-size: 16px;
-  }
-
 
   section {
     border:1px solid #e5e5e5;
