@@ -198,6 +198,8 @@ footer {
   position:fixed;
   padding-top:500px;
   padding-bottom: 50px;
+  overflow: hidden;
+  z-index: -1;
 }
 
 /* classes */
