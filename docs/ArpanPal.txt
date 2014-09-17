@@ -13,12 +13,12 @@ competitive environment along with true professionals, to put in the acquired kn
 to upcoming technologies while being resourceful, innovative and flexible.
 
 Skills:
-- Python, Java, C, PL/SQL, Shellscript, (Learning Django, Jquery, HTML/CSS+Responsive Design),
-- OS - GNU+Linux/FreeBSD/Windows/OSX,
-- DB - Oracle 10g, Microsoft SQL2005, MySQL, Sqlite3,
-- SW - NetBeans, Eclipse, Geany, Notepad++, Vim, Toad, Firebug, git, FTP, SSH,
-- SV - Apache, Nginx, Node.js, Lighttpd, CherryPi, Flask, Windows Server2000,
+- Python, Java, Shellscript, (Learning Django, Jquery, HTML/CSS+Responsive Design),
+- OS - GNU+Linux/Windows/OSXFreeBSD,
+- Database – Sqlite3,MySQL, Oracle 10g
+- IDE/Softwares – Sublime2, NetBeans, Eclipse, Git, Notepad++, Vim, Toad, Firebug, FTP, SSH
 - Ability to develop and deploy scalable apps in cloud.
+- Ability to deploy, administrate and maintain server side technologies.
 - Proficient in MS Powerpoint, Word, Excel, Adobe Photoshop.
 - Excellent attention to organization and detail.
 - Strong technical, analytical and decision making skills for problem identification and resolution.
