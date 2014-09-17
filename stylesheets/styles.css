@@ -107,7 +107,7 @@ img {
 
 header {
   /*min-width: 387px;*/
-  width:25%;
+  width:30%;
   float:left;
   position:fixed;
 }
@@ -171,7 +171,7 @@ header ul a strong {
 }
 
 section {
-  width: 65%;
+  width: 60%;
   float:right;
   padding-bottom:50px;
 }
@@ -193,16 +193,17 @@ hr {
 
 footer {
   text-align: center;
-  width:25%;
+  width:30%;
   float:left;
   position:fixed;
-  bottom:50px;
+  padding-top:500px;
+  padding-bottom: 50px;
 }
 
 /* classes */
 
 .wrapper {
-  width:85%;
+  width:100%;
   margin:0 auto;
 }
 
