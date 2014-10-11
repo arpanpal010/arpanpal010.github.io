@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title>arpanpal010.github.io</title>
+		<title>Home - arpanpal010.github.io</title>
 
 		<link rel="stylesheet" href="./stylesheets/styles.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-		<!--[if lt IE 9]>
+		<!--[IF lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
@@ -18,12 +18,12 @@
 		<div class="wrapper">
 <!--Header-->
 			<header>
-				<!--Navigation + Links-->					
+				<!--Navigation + Links-->
 				<div class="navbar">
 					<div class="center">
-						<a class="nav" href="#home">Home</a>
-						<a class="nav" href="#projects">Projects</a>
-						<a class="nav" href="#resume">Resumé</a>
+						<a class="nav" href="index.html">Home</a>
+						<a class="nav" href="projects.html">Projects</a>
+						<a class="nav" href="resume.html">Resumé</a>
 						<!--a class="nav" href="#blog">Blog</a>
 						<a class="nav" href="https://github.com/arpanpal010">Gits</a>
 						<a class="nav" href="https://gist.github.com/arpanpal010">Gists</a-->
@@ -40,25 +40,29 @@
 <!--Section-->
 			<section>
 	<!--Home-->
-				<h2 class="anchor" id="home" style="font-size: 30px;">Hello!</h2>
-				<h3 style="margin-left:0px; text-decoration: none;">I'm Arpan, an applications developer &#47; web programmer from Kolkata, India.</h3>	
+				<div class="anchor">
+					<h2 id="home" style="font-size: 30px;">Hello!</h2>
+				</div>
+				<h3 style="margin-left:0px; text-decoration: none;">I'm Arpan, an applications developer &#47; web programmer from Kolkata, India.</h3>
 				<p>
-					I finished my MSc. with merit in Internet Computing from <a href="http://www.surrey.ac.uk" target="_blank">The University of Surrey</a> in the September of 2013. 
+					I finished my MSc. with merit in Internet Computing from <a href="http://www.surrey.ac.uk" target="_blank">The University of Surrey</a> in the September of 2013.
 					Prior to that, I got my Bachelor's degree in 2011 in Computer Applications from <a href="http://www.theheritageacademy.in/" target="_blank">The Heritage Academy.</a>
 					Currently I spend much of my time multitasking between my own projects and responsibilities and I like writing short scripts or code snippets that make my life easier.
 				</p>
-				
+
 	<!--Projects-->
-				<h2 class="anchor"  id="projects">Projects</h2>
+				<div class="anchor">
+					<h2 id="projects"><a href="projects.html">Projects</a></h2>
+				</div>
 			<hr/>
 				<p>
-					Check out my <a href="https://github.com/arpanpal010" style="padding: 0 3px; background:#DEDEDE; border-radius: 5px;" target="_blank">GitHub</a> or <a href="https://gist.github.com/arpanpal010" style="padding: 0 3px; background:#DEDEDE; border-radius: 5px;" target="_blank">Gists</a> to see what I'm currently doing. 
-					All my work here is licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license, so feel free to clone, fork or share.
+					Go to <a href="projects.html"><u>Projects</u></a> or check out my <a class="boxtext" href="https://github.com/arpanpal010" target="_blank">GitHub</a> or <a href="https://gist.github.com/arpanpal010" class="boxtext" target="_blank">Gists</a> to see what I'm currently doing.
+					All my work here is licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license, so feel free to clone, fork or share. If you notice anything that may need further improvement, don't hesitate to send me a pull request.
 				</p>
 				<p>
 					My previous projects include, but are not limited to...
 					<ul>
-						<li> 
+						<li>
 							<a href="https://github.com/arpanpal010/clinss-fire13" target="_blank">Textual Re-use Detection system</a> (<a href="/docs/2013-clinss-Pal-Surrey.pdf" target="_blank">paper</a>) for <a href="http://users.dsic.upv.es/grupos/nle/clinss.html" target="_blank">CL!NSS</a> at <a href="http://pan.webis.de/" target="_blank">PAN@FIRE'13.</a>
 							(Ranked 5th by accuracy, and 3rd by organization.)
 						</li>
@@ -66,10 +70,10 @@
 							Knowledge based movie ranking AI using python-numpy/scipy.
 						</li>
 						<li>
-							<a href="/docs/clopladetsys.pdf" target="_blank">Scalable Textual plagiarism detection system</a> combining technologies from 
-								<a href="https://appengine.google.com/" target="_blank">Google App Engine</a>, 
+							<a href="/docs/clopladetsys.pdf" target="_blank">Scalable Textual plagiarism detection system</a> combining technologies from
+								<a href="https://appengine.google.com/" target="_blank">Google App Engine</a>,
 								<a href="https://aws.amazon.com/" target="_blank">Amazon EC2/EMR</a>
-							, and 
+							, and
 								<a href="https://www.openstack.org/" target="_blank">Openstack</a>
 							.
 						</li>
@@ -77,26 +81,36 @@
 							Web based Student information management system in <a href="https://www.zoho.com/creator/" target="_blank">Zoho Cloud</a> written in Deluge script.
 						</li>
 						<li>
-							Banking/Accounting prototype using JDK5.
+							Banking/Accounting prototype using JDK6.
 						</li>
 					</ul>
 				</p>
-				
 	<!--Resume-->
-				<h2 class="anchor" id="resume" >Resumé</h2>
+				<div class="anchor">
+					<h2 id="resume" ><a href="resume.html">Resumé</a></h2>
+					<!--a class="tagit" href="docs/ArpanPal.pdf" target="_blank">&lt;PDF&gt;</a-->
+					<a href="https://twitter.com/arpanpal010" title="Connect on Twitter" target="_blank">
+						<img src="./images/twitter-128.png" class="contacticon" height="25px" width="25px" alt="Twitter"/>
+					</a>
+					<a href="https://in.linkedin.com/in/arpanpal010" title="Connect on LinkedIn" target="_blank">
+						<img src="./images/linkedin-128.png" class="contacticon" height="25px" width="25px" alt="LinkedIn"/>
+					</a>
+					<a href="https://github.com/arpanpal010" title="View my repositories" target="_blank">
+						<img src="./images/github-128.png" class="contacticon" height="22px" width="22px" alt="Github"/>
+					</a>
+				</div>
 			<hr/>
-				<pre>My resumé is available as <a href="docs/ArpanPal.pdf" target="_blank"><i>&lt;PDF&gt;</i></a> &#47; <a href="docs/ArpanPal.docx" target="_blank"><i>&lt;DOCX&gt;</i></a> &#47; <a href="docs/ArpanPal.txt" target="_blank"><i>&lt;TEXT&gt;</i></a></pre>
+				<pre>My resumé is available as <a href="docs/ArpanPal.pdf" target="_blank"><b>&lt;PDF&gt;</b></a><!-- &#47; <a href="docs/ArpanPal.docx" target="_blank"><i>&lt;DOCX&gt;</i></a> &#47; <a href="docs/ArpanPal.txt" target="_blank"><i>&lt;TEXT&gt;</i></a--></pre>
 			</section>
-			
-<!--Footer-->	
+<!--Footer-->
 			<footer>
 				<p>
 					&copy; Arpan Pal
 					<br/>
-					<small>Hosted on GitHub Pages &mdash; Theme based on 'minimal' by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small>
+					<small>Hosted on GitHub Pages &mdash; Theme based on <a href="http://orderedlist.com/minimal/" target="_blank">'minimal'</a> by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small>
 				</p>
+				<div class="btntop"><a href="#"><b style="font-size: 20px;">&#x21E7;</b><br><b>TOP</b></a></div>
 			</footer>
-		
 		</div>
 		<script src="./javascripts/scale.fix.js"></script>
 	</body>

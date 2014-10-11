@@ -1,0 +1,348 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+		<title>Projects - arpanpal010.github.io</title>
+
+		<link rel="stylesheet" href="./stylesheets/styles.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+
+		<script>
+			function toggle( tabGroup, tabId ) { //script to toggle content displayed in section_tabs, default=0 follows #anchors
+				//collect all ids
+ 				var sel = document.getElementsByClassName(tabGroup);
+ 				//get id to display if not defined, try anchor or default=0
+ 				if ( tabId ) { ids = tabId; }
+				else if (document.location.hash.substring(1) != "") { ids = document.location.hash.substring(1); }
+				else { ids = sel[0].id; }
+
+ 				//hide all not selected
+  				for (var i=0; i<sel.length; i++) {
+    				if (sel[i].id == ids) { sel[i].style.display = 'block'; }
+    				else { sel[i].style.display = 'none'; }
+  					}
+  				//toggle selected
+				//if (document.getElementById(ids).style.display != 'block') {
+				//	document.getElementById(ids).style.display = 'block';}
+				//else {
+				//	document.getElementById(ids).style.display = 'none'; }
+				//alert(ids)
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+
+<!--Header-->
+			<header>
+	<!--Navigation + Links-->
+				<div class="navbar center">
+					<a class="nav" href="index.html">Home</a>
+					<a class="nav" href="projects.html">Projects</a>
+					<a class="nav" href="resume.html">Resumé</a>
+					<!--a class="nav" href="#blog">Blog</a>
+					<a class="nav" href="https://github.com/arpanpal010">Gits</a>
+					<a class="nav" href="https://gist.github.com/arpanpal010">Gists</a-->
+				</div>
+
+	<!--Project tabs-->
+				<div class="tabs">
+					<ul class="center">
+						<li><a href="#archinst" onclick="toggle('section_tabs', 'archinst');">ArchInst</a></li>
+						<li><a href="#clinss" onclick="toggle('section_tabs', 'clinss');">Clinss@Fire 13</a></li>
+						<li><a href="#mbusb" onclick="toggle('section_tabs', 'mbusb');">Multiboot USB</a></li>
+						<li><a href="#rpi" onclick="toggle('section_tabs', 'rpi');">Raspberry Pi</a></li>
+						<li><a href="#scripts" onclick="toggle('section_tabs', 'scripts');">Scripts</a></li>
+					</ul>
+				</div>
+			</header>
+
+<!--Section-->
+			<section>
+	<!--Projects-->
+				<div class="section_tabs_wrapper">
+		<!--default-->
+					<!--div id="filler" class="section_tabs" style="display:block;">
+						filler text - displayed by default
+						<div class="anchor">
+							<h2>Heading</h2>
+			<!tagit>
+							<a class="tagit" href="https://github.com/arpanpal010/no-such-git" target="_blank">/no-such-git/</a>
+						</div>
+						<hr/>
+			<!description>
+						<p></p>
+			<!Link to github>
+						<p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/no-such-git" target="_blank">Github</a>.</p>
+					</div-->
+
+		<!--archinst-->
+					<div id="archinst" class="section_tabs">
+						<div class="anchor">
+							<h2>ArchInst</h2>
+			<!--tagit-->
+							<a class="tagit" href="https://github.com/arpanpal010/archinst" target="_blank">/archinst/</a>
+						</div>
+						<hr/>
+						<h3 style="margin-left:0px; text-decoration: none;">Semi-interactive install script for <a href="https://www.archlinux.org/" target="_blank"><u>Arch Linux</u></a>.</h3>
+
+						<p> The script, written in <a class="boxtext" href="www.gnu.org/software/bash/">bash</a> (apologies to zsh users), carries out a combination of customizable tasks for both beginner or advanced users, and automates the somewhat tedious task of installation. It works for both x86 and x86_64 architecture, although includes some post-installation tasks that are useful in other systems as well. It is highly customizable and per-system configurations are allowed, however, being <a href="https://wiki.archlinux.org/index.php/The_Arch_Way" target="_blank">Arch Linux</a>, might require a bit of experience with linux (or reading the <a href="https://wiki.archlinux.org/" target="_blank">ArchWiki</a>).
+						</p>
+
+						<p>The procedure of installing archlinux comprises of a total 4 stages to setup upto the administrator account, and
+						another one to setup the user account specific settings. Namely these stages and the steps they perform are described below.</p>
+
+						<ol>
+							<li>
+								<u>Pre-boot</u>
+									<ul>
+										<li>Download ISO from any of the <a href="https://www.archlinux.org/download/#download-mirrors" target="_blank">mirrors</a>.</li>
+										<li>Verify ISO with the signature file.</li>
+										<li>Write ISO to USB.</li>
+										<li>Boot device with USB. (Preferably with help of user.)</li>
+									</ul>
+							</li>
+							<li>
+									<u>Pre-Installation</u>
+									<ul>
+										<li>Set time to localtime.</li>
+										<li>Check if UEFI-boot. (Does not support UEFI, yet.)</li>
+										<li>Update mirrorlist for pacman.</li>
+										<li>Mount block devices to their places, /, /boot, /home, etc.</li>
+										<li>Run pacstrap.</li>
+										<li>Generate fstab.</li>
+										<li>Chroot.</li>
+										<li>Run post-installation. (See next-step)</li>
+										<li>Unmount and reboot.</li>
+									</ul>
+							</li>
+							<li>
+								<u>Post-Installation</u>
+									<ul>
+										<li>Set hostname.</li>
+										<li>Set root password.</li>
+										<li>Generate system locales.</li>
+										<li>Set system time.</li>
+										<li>Generate initial ramdisk.</li>
+										<li>Install a bootloader <a class="boxtext" href="https://www.gnu.org/software/grub/" target="_blank">(grub2)</a>. (and scan to detect other OS if dual booting)</li>
+										<li>Create administrator account/set password.</li>
+										<li>Give sudo privilege to group 'wheel'.</li>
+									</ul>
+							</li>
+							<li>
+								<u> System configuration</u>
+									<ul>
+										<li>Enable multilib. (if x86_64)</li>
+										<li>Install default packages.</li>
+										<li>Setup basic firewall with <a class="boxtext" href="http://ipset.netfilter.org/iptables.man.html" target="_blank">iptables</a>.</li>
+										<li>Start system services.</li>
+										<li>Run initial <a class="boxtext" href="http://rkhunter.sourceforge.net/" target="_blank">rkhunter</a> scan.</li>
+										<li>Run <a class="boxtext" href="http://www.lm-sensors.org/" target="_blank">lm_sensors</a> scan.</li>
+										<li>Install additional packages. (if configured as such)</li>
+										<li>Start services.</li>
+									</ul>
+							</li>
+							<li>
+								<u>User configuration</u>
+									<ul>
+										<li>Generate private-public keypairs for ssh.</li>
+										<li>Install yaourt.</li>
+										<li>install AUR packages.</li>
+										<li>Setup/restore user configurations (git + <a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank">linkthedots.sh)</a>.</li>
+									</ul>
+							</li>
+						</ol>
+
+
+			<!--Link to github-->
+						<p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/archinst" target="_blank">Github</a>.</p>
+					</div>
+
+<!-- ######################################################### -->
+
+		<!--clinss-->
+					<div id="clinss" class="section_tabs">
+						<div class="anchor">
+							<h2>Clinss@Fire'13</h2>
+			<!--tagit-->
+							<a class="tagit" href="https://github.com/arpanpal010/clinss-fire13" target="_blank">/clinss-fire13/</a>
+						</div>
+						<hr/>
+						<h3 style="margin-left:0px; text-decoration: none;">MSc Dissertation and submission for <a href="http://users.dsic.upv.es/grupos/nle/clinss.html" target="_blank">CL!NSS</a> task at <a href="http://pan.webis.de/" target="_blank">FIRE'13</a>.</h3>
+						<p>
+						<b>Paper:</b><a href="./docs/2013-clinss-Pal-Surrey.pdf" target="_blank">Set-based Similarity Measurement and Ranking Model to Identify Cases of Journalistic Text Reuse.</a>
+						</p>
+
+						<p>A little bit about our approach, we first convert the English text to Hindi with Google Translate, and extract four word-groups from the text, as seen below...</p>
+						<ul>
+							<li><u>title</u> - The document title</li>
+							<li><u>content</u> - The content of the article </li>
+							<li><u>unique words</u> - in content (also called fingerprint, as it can uniquely identify the document) </li>
+							<li><u>frequent words</u> - an amount of words that appear most frequently in the document.
+						</ul>
+						<p>These four groups, along with their <u>publication dates</u>, are compared with each document in the hindi corpus and a weighted combination of these five individual similarity scores determines an overall amount of similarity between the english text and hindi text. The documents are ranked according to their final score, and a relevance table is prepared that can be checked with the provided perl script and qrel file to check the accuracy of the system.</p>
+
+						<p>We were placed 3rd by organization, with best scores of:
+						<br/><b>NDCG@1 - 0.6600, NDCG@5 - 0.5579, NDCG@10 - 0.5604</b>.</p>
+
+						<p>Although this system is made mainly to be merely a filtration process to determine a list of potential candidates that can be checked by more resource heavy processes, it seems there exists definite room for improvement.</p>
+			<!--Link to github-->
+						<p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/clinss-fire13" target="_blank">Github</a>.</p>
+					</div>
+
+<!-- ######################################################### -->
+
+		<!--mbusb-->
+					<div id="mbusb" class="section_tabs">
+						<div class="anchor">
+							<h2>Multi-Boot USB</h2>
+			<!--tagit-->
+							<a class="tagit" href="https://github.com/arpanpal010/mbusb" target="_blank">/mbusb/</a>
+						</div>
+						<hr/>
+						<h3 style="margin-left:0px; text-decoration: none;">One USB to rule them all.</h3>
+						<p>This project allows more than one Operating System to boot from a single USB, currently only Linux/Unix based ones. Very helpful to distro-hoppers, but supports a bunch of system tools to reset, clean, image, or maintain systems that experienced users might find useful as well.</p>
+
+						<p>This is a popular method to boot multiple LiveCDs or Bootable versions of systems off of a FAT32 (vfat) formatted USB drive, and there is no limit on the number of OSs, as long the USB does not run out of space. The bootloader used here is <a class="boxtext" href="https://www.gnu.org/software/grub/" target="_blank">grub2</a>,for  booting the ISOs in loopback mode.The USB can boot both x86 and x86_64 architecture ISOs, however if the CPU architecture does not support 64bit addressing scheme, the 64bit option is automatically hidden in the boot menu.</p>
+
+						<h3>List of supported OS(s):</h3>
+						<ul style="margin-left: 15px;">
+							<li><u>Android x86</u>
+								<ul>
+									<li>4.4 RC2</li>
+								</ul>
+							</li>
+							<li><u>GNU/Linux</u>
+								<ul>
+									<li>Arch Linux 2014.08.01</li>
+									<li>Debian Wheezy</li>
+									<li>Linux Mint 17 Quiana</li>
+									<li>GRML 2014.03</li>
+									<li>Ubuntu 14.04</li>
+									<li>Kali Linux 1.0.7</li>
+								</ul>
+							</li>
+							<li><u>Tools</u>
+								<ul>
+									<li>SystemRescueCD x86 4.2.0</li>
+									<li>GParted Live 0.18.0-2</li>
+									<li>Clonezilla Live 20140331</li>
+									<li>DBAN 2.2.8</li>
+									<li>Memtest86+ 5.01</li>
+								</ul>
+							</li>
+						</ul>
+			<!--Link to github-->
+						<p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/mbusb" target="_blank">Github</a>.</p>
+					</div>
+
+<!-- ######################################################### -->
+
+		<!--rpi-->
+					<div id="rpi" class="section_tabs">
+						<div class="anchor">
+							<h2>Raspberry Pi</h2>
+			<!--tagit-->
+							<a class="tagit" href="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7" target="_blank">/rpi/</a>
+						</div>
+						<hr/>
+						<p>I've been an owner of a <a class="boxtext" href="http://www.raspberrypi.org/">Raspberry Pi Model B</a> since late 2012, and over the years I've done some pretty cool (or sometimes nasty) stuff to it, and still now its happily running a small development (nginx/uwsgi/django stack) server along with dns service, private git repo, mumble server and file storage service, which can be partially accessed or administered from the internet. I think its time I begin to document/gather information that might help those who need it. Plus I can just copy stuff off here when I reset it which is more often than I would like to admit.</p>
+
+						<p>[Before I can setup a blog type archiving system for the posts (probably with Jekyll), or before this strategy grows too big to maintain, all bits of text will be coming from my gists, which I try to update/cleanup often]</p>
+			<!--Links to gist-->
+					<h3><a onclick="toggle('rpi_tabs', 'sysctl.conf');" style="cursor: grab;">Optimizing kernel parameters</a></h3>
+						<div id="sysctl.conf" class="rpi_tabs">
+							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=sysctl.conf"></script>
+						</div>
+
+					<h3><a onclick="toggle('rpi_tabs', 'firewall');" style="cursor: grab;">Basic firewall configuration with iptables</a></h3>
+						<div id="firewall" class="rpi_tabs">
+							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=firewall"></script>
+						</div>
+
+					<h3><a onclick="toggle('rpi_tabs', 'dns');" style="cursor: grab;">Local Caching DNS Server with PDNSD</a></h3>
+						<div id="dns" class="rpi_tabs">
+							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dns"></script>
+						</div>
+					<h3><a onclick="toggle('rpi_tabs', 'dyndns');" style="cursor: grab;">Dynamic DNS service (with dnsdynamic.org)</a></h3>
+						<div id="dyndns" class="rpi_tabs">
+							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dyndns"></script>
+						</div>
+					<h3><a onclick="toggle('rpi_tabs', 'git-server');" style="cursor: grab;">Private GIT server</a></h3>
+						<div id="git-server" class="rpi_tabs">
+							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=git-server"></script>
+						</div>
+					<h3><a onclick="toggle('rpi_tabs', 'rpibackup');" style="cursor: grab;">Backup over SCP</a></h3>
+						<div id="rpibackup" class="rpi_tabs">
+							<script src="https://gist.github.com/arpanpal010/60baf859e995425c75e5.js"></script>
+						</div>
+					<script> toggle('rpi_tabs'); </script>
+				</div>
+
+<!-- ######################################################### -->
+
+		<!--scripts-->
+					<div id="scripts" class="section_tabs">
+						<div class="anchor">
+							<h2>Scripts</h2>
+			<!--tagit-->
+							<a class="tagit" href="https://gist.github.com/arpanpal010" target="_blank">/gists/</a>
+						</div>
+						<hr/>
+						<p>Recently cleaned up my gists and removed all but only the scripts that are actually useful without heavy modification.</p>
+
+						Currently it contains:
+						<ul>
+							<li>
+								<a href="https://gist.github.com/arpanpal010/41f927fc78832983d259" target="_blank">Simple file duplicate detector using SHA1 hashing (python2.7)</a>
+							</li>
+							<li>
+								<a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank">Copies/moves various files from its own backup dir, to their proper places.</a>
+								(Mostly used to backup/push dotfiles to their own places)
+							</li>
+							<li>
+								<a href="https://gist.github.com/arpanpal010/b05146ef575c049ec94e" target="_blank">Recursively fetch movie/character/name IDs from the mothership.</a>
+							</li>
+							<li><a href="https://gist.github.com/arpanpal010/0c6d38981061f93f76a1" target="_blank"> Very High entropy 			obfuscated memoryless password generator.</a>
+								(Using SHA1 hashing and base64 encoding.)
+							</li>
+							<li>
+								<a href="https://gist.github.com/arpanpal010/ac9f610316d709da53aa" target="_blank">Simple command-line interface to dm-crypt with LUKS.</a>
+								(So far,create container, decrypt, encrypt, extend)
+							</li>
+							<!--li><a href="" target="_blank"></a></li-->
+						</ul>
+			<!--Link to github-->
+						<p> <u>View all my</u> <a class="boxtext" href="https://gist.github.com/arpanpal010" target="_blank">gists</a>.</p>
+					</div>
+
+		<!---->
+				</div>
+			</section>
+
+<!--Footer-->
+			<footer>
+				<p>
+					&copy; Arpan Pal
+					<br/>
+					<small>Hosted on GitHub Pages &mdash; Theme based on <a href="http://orderedlist.com/minimal/" target="_blank">'minimal'</a> by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small>
+				</p>
+			<!--Top Button-->
+				<div class="btntop"><a href="#"><b style="font-size: 20px;">&#x21E7;</b><br><b>TOP</b></a></div>
+			</footer>
+
+		</div>
+
+		<script src="./javascripts/scale.fix.js"></script>
+		<script> toggle('section_tabs'); </script>
+
+	</body>
+</html>
