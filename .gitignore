@@ -1,5 +1,6 @@
 #all .bkp files
 *.bkp
+*.swp
 
 #anything in /ignore-dir
 ignore-dir/

@@ -84,6 +84,8 @@
 						<p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/no-such-git" target="_blank">Github</a>.</p>
 					</div-->
 
+<!-- ######################################################### -->
+
 		<!--archinst-->
 					<div id="archinst" class="section_tabs">
 						<div class="anchor">
@@ -102,16 +104,19 @@
 
 						<ol>
 							<li>
-								<u>Pre-boot</u>
+								<u><a onclick="toggle('archinst_tabs', 'preboot');" style="cursor: pointer;">Pre-Boot</a></u>
+								<div id="preboot" class="archinst_tabs">
 									<ul>
 										<li>Download ISO from any of the <a href="https://www.archlinux.org/download/#download-mirrors" target="_blank">mirrors</a>.</li>
 										<li>Verify ISO with the signature file.</li>
 										<li>Write ISO to USB.</li>
 										<li>Boot device with USB. (Preferably with help of user.)</li>
 									</ul>
+								</div>
 							</li>
 							<li>
-									<u>Pre-Installation</u>
+								<u><a onclick="toggle('archinst_tabs', 'preinst');" style="cursor: pointer;">Pre-Installation</a></u>
+								<div id="preinst" class="archinst_tabs">
 									<ul>
 										<li>Set time to localtime.</li>
 										<li>Check if UEFI-boot. (Does not support UEFI, yet.)</li>
@@ -123,9 +128,11 @@
 										<li>Run post-installation. (See next-step)</li>
 										<li>Unmount and reboot.</li>
 									</ul>
+								</div>
 							</li>
 							<li>
-								<u>Post-Installation</u>
+								<u><a onclick="toggle('archinst_tabs', 'postinst');" style="cursor: pointer;">Post-Installation</a></u>
+								<div id="postinst" class="archinst_tabs">
 									<ul>
 										<li>Set hostname.</li>
 										<li>Set root password.</li>
@@ -136,9 +143,11 @@
 										<li>Create administrator account/set password.</li>
 										<li>Give sudo privilege to group 'wheel'.</li>
 									</ul>
+								</div>
 							</li>
 							<li>
-								<u> System configuration</u>
+								<u><a onclick="toggle('archinst_tabs', 'sysconf');" style="cursor: pointer;">System Configuration</a></u>
+								<div id="sysconf" class="archinst_tabs">
 									<ul>
 										<li>Enable multilib. (if x86_64)</li>
 										<li>Install default packages.</li>
@@ -149,19 +158,22 @@
 										<li>Install additional packages. (if configured as such)</li>
 										<li>Start services.</li>
 									</ul>
+								</div>
 							</li>
 							<li>
-								<u>User configuration</u>
+								<u><a onclick="toggle('archinst_tabs', 'userconf');" style="cursor: pointer;">User Configuration</a></u>
+								<div id="userconf" class="archinst_tabs">
 									<ul>
 										<li>Generate private-public keypairs for ssh.</li>
 										<li>Install yaourt.</li>
 										<li>install AUR packages.</li>
 										<li>Setup/restore user configurations (git + <a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank">linkthedots.sh)</a>.</li>
 									</ul>
+								</div>
 							</li>
 						</ol>
-
-
+						<script> toggle('archinst_tabs'); </script>
+						<br/>
 			<!--Link to github-->
 						<p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/archinst" target="_blank">Github</a>.</p>
 					</div>
@@ -258,36 +270,37 @@
 
 						<p>[Before I can setup a blog type archiving system for the posts (probably with Jekyll), or before this strategy grows too big to maintain, all bits of text will be coming from my gists, which I try to update/cleanup often]</p>
 			<!--Links to gist-->
-					<h3><a onclick="toggle('rpi_tabs', 'sysctl.conf');" style="cursor: grab;">Optimizing kernel parameters</a></h3>
+					<h3><a onclick="toggle('rpi_tabs', 'sysctl.conf');" style="cursor: pointer;">Optimizing kernel parameters</a></h3>
 						<div id="sysctl.conf" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=sysctl.conf"></script>
 						</div>
 
-					<h3><a onclick="toggle('rpi_tabs', 'firewall');" style="cursor: grab;">Basic firewall configuration with iptables</a></h3>
+					<h3><a onclick="toggle('rpi_tabs', 'firewall');" style="cursor: pointer;">Basic firewall configuration with iptables</a></h3>
 						<div id="firewall" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=firewall"></script>
 						</div>
 
-					<h3><a onclick="toggle('rpi_tabs', 'dns');" style="cursor: grab;">Local Caching DNS Server with PDNSD</a></h3>
+					<h3><a onclick="toggle('rpi_tabs', 'dns');" style="cursor: pointer;">Local Caching DNS Server with PDNSD</a></h3>
 						<div id="dns" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dns"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'dyndns');" style="cursor: grab;">Dynamic DNS service (with dnsdynamic.org)</a></h3>
+					<h3><a onclick="toggle('rpi_tabs', 'dyndns');" style="cursor: pointer;">Dynamic DNS service (with dnsdynamic.org)</a></h3>
 						<div id="dyndns" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dyndns"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'git-server');" style="cursor: grab;">Private GIT server</a></h3>
+					<h3><a onclick="toggle('rpi_tabs', 'git-server');" style="cursor: pointer;">Private GIT server</a></h3>
 						<div id="git-server" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=git-server"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'nginx-ssl');" style="cursor: grab;">Use SSL with nginx</a></h3>
+					<h3><a onclick="toggle('rpi_tabs', 'nginx-ssl');" style="cursor: pointer;">Use SSL with Nginx</a></h3>
 						<div id="nginx-ssl" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=nginx-ssl"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'rpibackup');" style="cursor: grab;">Backup over SCP</a></h3>
+					<h3><a onclick="toggle('rpi_tabs', 'rpibackup');" style="cursor: pointer;">Backup over SCP</a></h3>
 						<div id="rpibackup" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/60baf859e995425c75e5.js"></script>
 						</div>
+
 					<script> toggle('rpi_tabs'); </script>
 				</div>
 
