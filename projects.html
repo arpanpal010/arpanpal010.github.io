@@ -13,9 +13,15 @@
 			function toggle( tabGroup, tabId ) { //script to toggle content displayed in section_tabs, default=0 follows #anchors
 				//collect all ids
  				var sel = document.getElementsByClassName(tabGroup);
+				var anchor = document.location.hash.substring(1);
  				//get id to display if not defined, try anchor or default=0
  				if ( tabId ) { ids = tabId; }
-				else if (document.location.hash.substring(1) != "") { ids = document.location.hash.substring(1); }
+				else if ( anchor != "" ) {
+					//ids = anchor; 
+					for (var i=0; i< sel.length; i++)
+						if (anchor == sel[i].id) { ids=anchor; }
+						else { ids = sel[0].id; }
+					}
 				else { ids = sel[0].id; }
 
  				//hide all not selected
@@ -270,33 +276,33 @@
 
 						<p>[Before I can setup a blog type archiving system for the posts (probably with Jekyll), or before this strategy grows too big to maintain, all bits of text will be coming from my gists, which I try to update/cleanup often]</p>
 			<!--Links to gist-->
-					<h3><a onclick="toggle('rpi_tabs', 'sysctl.conf');" style="cursor: pointer;">Optimizing kernel parameters</a></h3>
+					<h3><a href="#sysctl.conf" onclick="toggle('rpi_tabs', 'sysctl.conf');" style="cursor: pointer;">Optimizing kernel parameters</a></h3>
 						<div id="sysctl.conf" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=sysctl.md"></script>
 						</div>
 
-					<h3><a onclick="toggle('rpi_tabs', 'firewall');" style="cursor: pointer;">Basic firewall configuration with iptables</a></h3>
+					<h3><a href="#firewall" onclick="toggle('rpi_tabs', 'firewall');" style="cursor: pointer;">Basic firewall configuration with iptables</a></h3>
 						<div id="firewall" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=firewall.md"></script>
 						</div>
 
-					<h3><a onclick="toggle('rpi_tabs', 'dns');" style="cursor: pointer;">Local Caching DNS Server with PDNSD</a></h3>
+					<h3><a href="#dns" onclick="toggle('rpi_tabs', 'dns');" style="cursor: pointer;">Local Caching DNS Server with PDNSD</a></h3>
 						<div id="dns" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dns.md"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'dyndns');" style="cursor: pointer;">Dynamic DNS service (with dnsdynamic.org)</a></h3>
+					<h3><a href="#dyndns" onclick="toggle('rpi_tabs', 'dyndns');" style="cursor: pointer;">Dynamic DNS service (with dnsdynamic.org)</a></h3>
 						<div id="dyndns" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dyndns.md"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'git-server');" style="cursor: pointer;">Private GIT server</a></h3>
+					<h3><a href="#git-server" onclick="toggle('rpi_tabs', 'git-server');" style="cursor: pointer;">Private GIT server</a></h3>
 						<div id="git-server" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=git-server.md"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'nginx-ssl');" style="cursor: pointer;">Use SSL with Nginx</a></h3>
+					<h3><a href="#nginx-ssl" onclick="toggle('rpi_tabs', 'nginx-ssl');" style="cursor: pointer;">Use SSL with Nginx</a></h3>
 						<div id="nginx-ssl" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=nginx-ssl.md"></script>
 						</div>
-					<h3><a onclick="toggle('rpi_tabs', 'rpibackup');" style="cursor: pointer;">Backup over SCP</a></h3>
+					<h3><a href="#rpibackup" onclick="toggle('rpi_tabs', 'rpibackup');" style="cursor: pointer;">Backup over SCP</a></h3>
 						<div id="rpibackup" class="rpi_tabs">
 							<script src="https://gist.github.com/arpanpal010/60baf859e995425c75e5.js"></script>
 						</div>
