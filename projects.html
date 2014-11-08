@@ -61,7 +61,7 @@
 
 	<!--Project tabs-->
 				<div class="tabs">
-					<ul class="center">
+					<ul class="center" style="padding-left:0;">
 						<li><a href="#archinst" onclick="toggle('section_tabs', 'archinst');">ArchInst</a></li>
 						<li><a href="#clinss" onclick="toggle('section_tabs', 'clinss');">Clinss@Fire 13</a></li>
 						<li><a href="#mbusb" onclick="toggle('section_tabs', 'mbusb');">Multiboot USB</a></li>
@@ -206,7 +206,7 @@
 							<li><u>unique words</u> - in content (also called fingerprint, as it can uniquely identify the document) </li>
 							<li><u>frequent words</u> - an amount of words that appear most frequently in the document.
 						</ul>
-						<p>These four groups, along with their <u>publication dates</u>, are compared with each document in the hindi corpus and a weighted combination of these five individual similarity scores determines an overall amount of similarity between the english text and hindi text. The documents are ranked according to their final score, and a relevance table is prepared that can be checked with the provided perl script and qrel file to check the accuracy of the system.</p>#
+						<p>These four groups, along with their <u>publication dates</u>, are compared with each document in the hindi corpus and a weighted combination of these five individual similarity scores determines an overall amount of similarity between the english text and hindi text. The documents are ranked according to their final score, and a relevance table is prepared that can be checked with the provided perl script and qrel file to check the accuracy of the system.</p>
 
 						<p>We were placed 3rd by organization, with best scores of:
 						<br/><b>NDCG@1 - 0.6600, NDCG@5 - 0.5579, NDCG@10 - 0.5604</b>.</p>
@@ -320,29 +320,72 @@
 							<a class="tagit" href="https://gist.github.com/arpanpal010" target="_blank">/gists/</a>
 						</div>
 						<hr/>
-						<p>Recently cleaned up my gists and removed all but only the scripts that are actually useful without heavy modification.</p>
+						<p>Recently cleaned up my gists and removed all but only the scripts/codesnippets that are actually useful without heavy modification.</p>
 
 						Currently it contains:
-						<ul>
-							<li>
-								<a href="https://gist.github.com/arpanpal010/41f927fc78832983d259" target="_blank">Simple file duplicate detector using SHA1 hashing (python2.7)</a>
-							</li>
-							<li>
-								<a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank">Copies/moves various files from its own backup dir, to their proper places.</a>
-								(Mostly used to backup/push dotfiles to their own places)
-							</li>
-							<li>
-								<a href="https://gist.github.com/arpanpal010/b05146ef575c049ec94e" target="_blank">Recursively fetch movie/character/name IDs from the mothership.</a>
-							</li>
-							<li><a href="https://gist.github.com/arpanpal010/0c6d38981061f93f76a1" target="_blank"> Very High entropy 			obfuscated memoryless password generator.</a>
-								(Using SHA1 hashing and base64 encoding.)
-							</li>
-							<li>
-								<a href="https://gist.github.com/arpanpal010/ac9f610316d709da53aa" target="_blank">Simple command-line interface to dm-crypt with LUKS.</a>
-								(So far,create container, decrypt, encrypt, extend)
-							</li>
-							<!--li><a href="" target="_blank"></a></li-->
-						</ul>
+						<table>
+							<!--tr template>
+								<td>
+									<a href="" target="_blank">scriptname</a>
+								</td>
+								<td>
+									description
+								</td>
+							</tr-->
+							<tr>
+								<td>
+									<a href="https://gist.github.com/arpanpal010/3d5a7e6a08fe42899a69" target="_blank">gfeed2js.js</a>
+								</td>
+								<td>
+									Simple RSS feed parser using only Javascript and Google Feeds API.
+									(used in my custom browser <a href="https://arpanpal010.github.io/home/" target="_blank">homepage</a>)
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://gist.github.com/arpanpal010/41f927fc78832983d259" target="_blank">deduplicate.py</a>
+								</td>
+								<td>
+									Simple file duplicate detector and (re)mover using SHA1 hashing (python2.7)
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank">linkthedots.sh</a>
+								</td>
+								<td>
+									Copies/moves various files from its own backup dir, to their proper places. (Mostly used to backup/push dotfiles to their own places)
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://gist.github.com/arpanpal010/b05146ef575c049ec94e" target="_blank">getter_media.sh</a>
+								</td>
+								<td>
+									Recursively fetch movie/character/name IDs from the <a href="http://www.imdb.com/" target="_blank">mothership</a>.
+									Update: Fetch actual information (JSON/XML) from <a href="http://myapifilms.com" target="_blank">MyAPIFilms</a>.
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://gist.github.com/arpanpal010/0c6d38981061f93f76a1" target="_blank">passgen.sh</a>
+								</td>
+								<td>
+									Very High entropy obfuscated memoryless password generator.
+									(Using SHA1 hashing and base64 encoding.)
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="https://gist.github.com/arpanpal010/ac9f610316d709da53aa" target="_blank">cryptmount.sh</a>
+								</td>
+								<td>
+									Simple command-line interface to dm-crypt with LUKS.
+									(So far,create container, decrypt, encrypt, extend)
+								</td>
+							</tr>
+						</table>
+						<br/>
 			<!--Link to github-->
 						<p> <u>View all my</u> <a class="boxtext" href="https://gist.github.com/arpanpal010" target="_blank">gists</a>.</p>
 					</div>
