@@ -278,9 +278,9 @@ footer {
 }
 
 .tabs li a {
-	margin-left: 0.66em;
+	padding-left: 1em;
 	display: block;
-	width: 100%;
+	width: auto;
 	height: 100%;
 }
 
