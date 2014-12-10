@@ -117,7 +117,7 @@ img {
 
 header {
 	/*min-width: 387px;*/
-	width:30%;
+	width:25%;
 	float:left;
 	position:fixed;
 }
@@ -181,7 +181,7 @@ header ul a strong {
 }
 */
 section {
-	width: 60%;
+	width: 65%;
 	float:right;
 	padding-bottom:4em;
 }
@@ -204,7 +204,7 @@ hr {
 footer {
 	text-align: center;
 	clear: both;
-	width:30%;
+	width:25%;
 	/*margin-top: 340px;*/
 	bottom:-4em;
 	position:fixed;
