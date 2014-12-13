@@ -12,117 +12,123 @@
 		<!--[IF lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-
-<!--Google analytics snippet-->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-56557997-1', 'auto');
-  ga('set', 'forceSSL', true);        // Send all data using SSL, even from insecure (HTTP) pages.
-  ga('send', 'pageview');
-
-</script>
 	</head>
 
 	<body>
-		<div class="wrapper">
+		<div id="contents-wrapper">
 <!--Header-->
 			<header>
 				<!--Navigation + Links-->
-				<div class="navbar">
-					<div class="center">
-						<a class="nav" href="index.html">Home</a>
-						<a class="nav" href="projects.html">Projects</a>
-						<a class="nav" href="resume.html">Resumé</a>
-						<!--a class="nav" href="#blog">Blog</a>
-						<a class="nav" href="https://github.com/arpanpal010">Gits</a>
-						<a class="nav" href="https://gist.github.com/arpanpal010">Gists</a-->
-					</div>
-				</div>
-				<div class="center">
-					<img src="./images/apal.png" width="140" height="140" style="border-radius: 10px;" alt="git.avatar"/>
-					<br/>
-					<h1 style="font-size: 30pt; margin: 0 0 8px;">Arpan Pal</h1>
-					<!--h5 style="width: 75%; text-align: center; background: #D6D6D6; border-radius: 20px; color: #000000";>Tech enthusiast &#8211; Code hippo &#8211; Problem solver</h5-->
-					<pre><a href="mailto:arpan.pal010@gmail.com" target="_top">arpan.pal010@gmail.com</a><br/><a href="https://arpanpal010.github.io" target="_top">arpanpal010.github.io</a></pre>
-				</div>
+				<nav class="center">
+					<a class="nav-item" href="index.html">Home</a>
+					<a class="nav-item" href="projects.html">Projects</a>
+					<a class="nav-item" href="resume.html">Resum&#233;</a>
+					<!--a class="nav-item" href="#blog">Blog</a-->
+				</nav>
 			</header>
+<!--Aside-->
+			<aside>
+				<div class="nameage">
+<!--Image-->		<img src="./images/apal.png" width="140" height="140" style="border-radius: 10px;" alt="git.avatar"/>
+<!--Arpan Pal-->	<h1 style="font-size: 2.7em; font-weight: 700; margin: 0 0 8px;">Arpan Pal</h1>
+				</div>
+<!--contactbox-->
+				<div class="contactbox">
+					<!--h5 style="width: 75%; text-align: center; background: #D6D6D6; border-radius: 20px; color: #000000";>Tech enthusiast &#8211; Code hippo &#8211; Problem solver</h5-->
+					<a href="https://arpanpal010.github.io" title="You are here!" target="_top">arpanpal010.github.io</a>
+					<a href="mailto:arpan.pal010@gmail.com" title="Send me a mail?" target="_top">arpan.pal010@gmail.com</a>
+		
+					<a href="https://github.com/arpanpal010" title="View my repositories" target="_blank" style="margin-top: 0.3em;">
+							<!--onmouseover="document.getElementById('github-id').style.display='inline';"
+							onmouseout="document.getElementById('github-id').style.display='none';"-->
+						<img src="./images/iconmonstr-github-5-icon.svg" class="contacticon" alt="Github" height="30px" width="30px"/>
+						<span id="github-id">arpanpal010</span>
+					</a>
+					<a href="https://in.linkedin.com/in/arpanpal010" title="Connect on LinkedIn" target="_blank">
+							<!--onmouseover="document.getElementById('linkedin-id').style.display='inline';"
+							onmouseout="document.getElementById('linkedin-id').style.display='none';"-->
+						<img src="./images/iconmonstr-linkedin-5-icon.svg" class="contacticon" alt="LinkedIn" height="30px" width="30px"/>
+						<span id="linkedin-id">arpanpal010</span>
+					</a>
+					<a href="https://twitter.com/arpanpal010" title="Follow on Twitter" target="_blank">
+							<!--onmouseover="document.getElementById('twitter-id').style.display='inline';"
+							onmouseout="document.getElementById('twitter-id').style.display='none';"-->
+						<img src="./images/iconmonstr-twitter-5-icon.svg" class="contacticon" alt="Twitter" height="30px" width="30px"/>
+						<span id="twitter-id">arpanpal010</span>
+					</a>
+				</div>
+			</aside>
+
 <!--Section-->
 			<section>
 	<!--Home-->
-				<div class="anchor">
-					<h2 id="home" style="font-size: 30px;">Hello!</h2>
-				</div>
-				<h3 style="margin-left:0px; text-decoration: none;">I'm Arpan, an applications developer &#47; web programmer from Kolkata, India.</h3>
-				<p>
-					I finished my MSc. with merit in Internet Computing from <a href="http://www.surrey.ac.uk" target="_blank">The University of Surrey</a> in the September of 2013.
-					Prior to that, I got my Bachelor's degree in 2011 in Computer Applications from <a href="http://www.theheritageacademy.in/" target="_blank">The Heritage Academy.</a>
-					Currently I spend much of my time multitasking between my own projects and responsibilities and I like writing short scripts or code snippets that make my life easier.
-				</p>
+				<article style="padding-bottom: 0;">
+					<div style="padding-top: 1.7em;">
+						<h2 id="home" style="font-size: 3em;"><em>Hello!</em></h2>
+					</div>
+					<h3 style="margin-left:0px; text-decoration: none;"><em>I'm Arpan, an applications developer&#47;web programmer from Kolkata, India.</em></h3>
+					<p>
+						I finished my MSc. with merit in Internet Computing from <a href="http://www.surrey.ac.uk" target="_blank"><strong>The University of Surrey</strong></a> in the September of 2013.
+						Prior to that, I got my Bachelor's degree in 2011 in Computer Applications from <a href="http://www.theheritageacademy.in/" target="_blank"><strong>The Heritage Academy.</strong></a>
+						Currently I spend much of my time on freelance programming or webdev projects and the rest multitasking between my own projects and responsibilities. I hate doing the same things twice, so I write a bunch of short scripts or code snippets that make my life easier.
+					</p>
+				</article>
 
 	<!--Projects-->
-				<div class="anchor">
-					<h2 id="projects"><a href="projects.html">Projects</a></h2>
-				</div>
-			<hr/>
-				<p>
-					Go to <a href="projects.html"><u>Projects</u></a> or check out my <a class="boxtext" href="https://github.com/arpanpal010" target="_blank">GitHub</a> or <a href="https://gist.github.com/arpanpal010" class="boxtext" target="_blank">Gists</a> to see what I'm currently doing.
-					All my work here is licensed under the <a href="http://opensource.org/licenses/MIT">MIT</a> license, so feel free to clone, fork or share. If you notice anything that may need further improvement, don't hesitate to send me a pull request.
-				</p>
-				<p>
-					My previous projects include, but are not limited to...
-					<ul>
-						<li>
-							<a href="https://github.com/arpanpal010/clinss-fire13" target="_blank">Textual Re-use Detection system</a> (<a href="/docs/2013-clinss-Pal-Surrey.pdf" target="_blank">paper</a>) for <a href="http://users.dsic.upv.es/grupos/nle/clinss.html" target="_blank">CL!NSS</a> at <a href="http://pan.webis.de/" target="_blank">PAN@FIRE'13.</a>
-							(Ranked 5th by accuracy, and 3rd by organization.)
-						</li>
-						<li>
-							Knowledge based movie ranking AI using python-numpy/scipy.
-						</li>
-						<li>
-							<a href="/docs/clopladetsys.pdf" target="_blank">Scalable Textual plagiarism detection system</a> combining technologies from
-								<a href="https://appengine.google.com/" target="_blank">Google App Engine</a>,
-								<a href="https://aws.amazon.com/" target="_blank">Amazon EC2/EMR</a>
-							, and
-								<a href="https://www.openstack.org/" target="_blank">Openstack</a>
-							.
-						</li>
-						<li>
-							Web based Student information management system in <a href="https://www.zoho.com/creator/" target="_blank">Zoho Cloud</a> written in Deluge script.
-						</li>
-						<li>
-							Banking/Accounting prototype using JDK6.
-						</li>
-					</ul>
-				</p>
+				<article style="padding-bottom: 0;">
+					<div class="anchor" style="padding-top: 0;">
+						<h2 id="projects"><a href="projects.html" style="color: inherit;">Projects</a></h2>
+					</div>
+					<hr/>
+					<p>
+						Go to <a href="projects.html"><em>Projects</em></a> or check out my <a href="https://github.com/arpanpal010" target="_blank"><strong>GitHub</strong></a> or <a href="https://gist.github.com/arpanpal010" target="_blank"><strong>Gists</strong></a> to see what I'm currently doing.
+						All my work here is licensed under the <a href="http://opensource.org/licenses/MIT"><em>MIT</em></a> license, so feel free to clone, fork or share. If you notice anything that may need further improvement, don't hesitate to send me a pull request.
+					</p>
+					<p>
+						My previous projects include, but are not limited to...
+						<ul>
+							<li>
+								<a href="https://github.com/arpanpal010/clinss-fire13" target="_blank"><em>Textual Re-use Detection system</em></a> (<a href="./docs/2013-clinss-Pal-Surrey.pdf" target="_blank"><strong>paper</strong></a>) for <a href="http://users.dsic.upv.es/grupos/nle/clinss.html" target="_blank"><em>CL!NSS</em></a> at <a href="http://pan.webis.de/" target="_blank"><em>PAN@FIRE'13.</em></a>
+								(Ranked 5th by accuracy, and 3rd by organization.)
+							</li>
+							<li>
+								Knowledge based movie ranking AI using python-numpy/scipy.
+							</li>
+							<li>
+								<a href="./docs/clopladetsys.pdf" target="_blank"><em>Scalable Textual plagiarism detection system</em></a> combining technologies from
+									<a href="https://appengine.google.com/" target="_blank"><em>Google App Engine</em></a>,
+									<a href="https://aws.amazon.com/" target="_blank"><em>Amazon EC2/EMR</em></a>
+									, and
+									<a href="https://www.openstack.org/" target="_blank"><em>Openstack</em></a>
+									.
+							</li>
+							<li>
+								Web based Student information management system in <a href="https://www.zoho.com/creator/" target="_blank"><em>Zoho Cloud</em></a> written in Deluge script.
+							</li>
+							<li>
+								Banking/Accounting prototype using JDK6.
+							</li>
+						</ul>
+					</p>
+				</article>
 	<!--Resume-->
-				<div class="anchor">
-					<h2 id="resume" ><a href="resume.html">Resumé</a></h2>
-					<!--a class="tagit" href="docs/ArpanPal.pdf" target="_blank">&lt;PDF&gt;</a-->
-					<a href="https://twitter.com/arpanpal010" title="Connect on Twitter" target="_blank">
-						<img src="./images/iconmonstr-twitter-5-icon.svg" class="contacticon" height="30px" width="30px" alt="Twitter"/>
-					</a>
-					<a href="https://in.linkedin.com/in/arpanpal010" title="Connect on LinkedIn" target="_blank">
-						<img src="./images/iconmonstr-linkedin-5-icon.svg" class="contacticon" height="30px" width="30px" alt="LinkedIn"/>
-					</a>
-					<a href="https://github.com/arpanpal010" title="View my repositories" target="_blank">
-						<img src="./images/iconmonstr-github-5-icon.svg" class="contacticon" height="30px" width="30px" alt="Github"/>
-					</a>
-				</div>
-			<hr/>
-				<pre>My resumé is available as <a href="docs/ArpanPal.pdf" target="_blank"><b>&lt;PDF&gt;</b></a><!-- &#47; <a href="docs/ArpanPal.docx" target="_blank"><i>&lt;DOCX&gt;</i></a> &#47; <a href="docs/ArpanPal.txt" target="_blank"><i>&lt;TEXT&gt;</i></a--></pre>
+				<article>
+					<div class="anchor" style="padding-top: 0;">
+						<h2 id="resume" ><a href="resume.html" style="color: inherit;">Resum&#233;</a></h2>
+						<!--a class="tagit" href="docs/ArpanPal.pdf" target="_blank">&lt;PDF&gt;</a-->
+					</div>
+					<hr/>
+					<pre>My resum&#233; is available as <a href="./docs/ArpanPal.pdf" target="_blank"><strong>&lt;PDF&gt;</strong></a>.<!-- &#47; <a href="docs/ArpanPal.docx" target="_blank"><i>&lt;DOCX&gt;</i></a> &#47; <a href="docs/ArpanPal.txt" target="_blank"><i>&lt;TEXT&gt;</i></a--></pre>
+				</article>
 			</section>
 <!--Footer-->
-			<footer>
+			<footer class="clear center">
 				<p>
 					&copy; Arpan Pal
 					<br/>
-					<small>Hosted on GitHub Pages &mdash; Theme based on <a href="http://orderedlist.com/minimal/" target="_blank">'minimal'</a> by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a></small>
+					<small>Hosted on GitHub Pages<!-- &mdash; Theme based on <a href="http://orderedlist.com/minimal/" target="_blank">'minimal'</a> by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a--></small>
 				</p>
-				<div class="btntop"><a href="#"><b style="font-size: 20px;">&#x21E7;</b><br><b>TOP</b></a></div>
+				<!--div class="btntop"><a href="#"><b style="font-size: 20px;">&#x21E7;</b><br><b>TOP</b></a></div-->
 			</footer>
 		</div>
 	</body>
