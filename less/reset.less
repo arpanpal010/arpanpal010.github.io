@@ -1,0 +1,53 @@
+//===============================================================
+// Reset styles CSS
+//===============================================================
+
+@media print, screen {
+
+    * {
+        margin: 0; 
+        padding: 0
+    }   
+    
+    img, hr, fieldset, legend {border: 0}           
+    
+    article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {display: block}
+    
+    html {
+        font-size: 100%; 
+        -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+    }
+    
+    body, button, input, select, textarea {
+        font-family: Ubuntu, Arial, Helvetica, sans-serif;
+        color: #000;
+        line-height: 1.6;
+    }
+    
+    ::-moz-selection {
+        background: #BDBDBD;
+        color: #fff; 
+        text-shadow: none;
+    }
+
+    ::selection {
+        background: #BDBDBD;
+        color: #fff; 
+        text-shadow: none;
+    }
+    
+    ul {list-style: none}
+    
+    a {
+        color: #88011d;
+        //font-weight: bold;
+    
+        &:focus { outline: none;}
+        &:hover, &:active { outline: 0}
+    }
+    
+    q {quotes: none;
+        &:before, &:after {content: ""}
+    }
+}

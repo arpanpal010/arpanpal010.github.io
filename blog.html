@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="keywords" content="arpan, pal, arpanpal010, profile, portfolio, web, developer, application, programmer, analyst, full, stack, freelancer, administrator, frontend, backend, database, server"/>
+        <meta name="description" content="Blog of Arpan Pal, web developer, application programmer, analyst, freelancer"/>
+        <meta name="author" content="Arpan Pal"/>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+        <title>Blog of Arpan Pal - arpanpal010.github.io</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>        <!--link href="./images/favicon.svg" rel="icon" type="image/x-icon" /-->
+
+        <!--[IF lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
+
+            <!-- ######################################################## -->
+            <!-- CSS #################################################### -->
+            <!-- ######################################################## -->
+
+            <link rel="stylesheet" href="./stylesheets/styles.css">
+            <!--link rel="stylesheet/less" type="text/css" href="./less/main.less">
+                <script>
+less = {
+    env             : "development", // "production"
+    logLevel        : 2,
+    async           : true,          // false
+    fileAsync       : true,          // false
+    poll            : 1000,          // seconds
+    functions       : {},
+    dumpLineNumbers : "",            // "comments", "mediaquery", "all"
+    relativeUrls    : false,         //
+    globalVars      : {},            //
+    rootpath        : ""             //
+};
+                </script>
+                <script src="./js/less.min.js"></script-->
+    </head>
+
+    <body>
+
+        <div id="contents-wrapper">
+
+            <!-- ######################################################## -->
+            <!-- Header ################################################# -->
+            <!-- ######################################################## -->
+
+            <header>
+                <!--Navigation + Links-->
+                <nav class="center">
+                    <a class="nav-item" href="index.html">Home</a>
+                    <a class="nav-item" href="projects.html">Projects</a>
+                    <!--a class="nav-item" href="resume.html">Resum&#233;</a-->
+                    <a class="nav-item" href="blog.html">Blog</a>
+                </nav>
+            </header>
+
+
+            <!-- ######################################################## -->
+            <!-- Aside ################################################## -->
+            <!-- ######################################################## -->
+
+            <aside>
+                <div id="aside-container">
+                    <!--div id="sidebar-wrapper"-->
+                    <!--handled by listView()-->
+                    <!--/div-->
+                    <div id="tabs">
+                        <ul class="center" style="padding-left:0;">
+                            <li class="geminiblog-nav"><a href="#!frontpage">Frontpage</a></li>
+                            <li class="geminiblog-nav"><a href="#!archive">Archive</a></li>
+                            <li class="geminiblog-nav"><a href="#!tags">Tags</a></li>
+                        </ul>
+                    </div>
+                    <!--div id="blog-description">
+                        <h3><em>
+                        A cache of many things...<br/>
+                        thoughts, opinions, choices, hacks
+                        and inspirations from the corners of
+                        my mind, <br/>
+                        or you know... <br/>
+                        the Internet.
+                        </em></h3>
+                        </div-->
+        </div>
+            </aside>
+
+            <!-- ######################################################## -->
+            <!-- Section ################################################ -->
+            <!-- ######################################################## -->
+
+            <section class="">
+                <noscript> You need Javascript enabled in the browser to get this to work.</noscript>
+                <div id="entries-wrapper">
+                    <!--handled by either snippetView() or detailsView()-->
+                </div>
+                <!--div id="showMore" class="center full-width">
+                    <a id="btn-showMore" href="#" onclick="showArchive()">More</a>
+                    </div-->
+            </section>
+
+            <!-- ######################################################## -->
+            <!-- Footer ################################################# -->
+            <!-- ######################################################## -->
+
+            <footer class="clear center">
+                <p>
+                &copy; Arpan Pal
+                <br/>
+                <small>Hosted on GitHub Pages<!-- &mdash; Theme based on <a href="http://orderedlist.com/minimal/" target="_blank">'minimal'</a> by <a href="https://github.com/orderedlist" target="_blank">orderedlist</a--></small>
+                </p>
+                <!--div class="btntop"><a href="#"><b style="font-size: 20px;">&#x21E7;</b><br><b>TOP</b></a></div-->
+            </footer>
+            </div>
+
+            <!-- ######################################################## -->
+            <!-- JS ##################################################### -->
+            <!-- ######################################################## -->
+
+            <script type="text/javascript" src="./js/marked.js"></script>
+            <script type="text/javascript" src="./js/geminiblog.js"></script>
+            <!--config.js must always be defined after geminiblog.js-->
+            <script type="text/javascript" src="./js/config.js"></script>
+            <script src="./js/scale.fix.js"></script>
+
+            <script>
+//DISQUS configurations defined in config.js
+//that must be defined before this script
+
+// this is moved from the head so that the posts are loaded before the embed.js
+
+//this gives a "TypeError: a is null" for pages that aren't blog posts
+//because the div that contains the DISQUS thread is undefined
+//will see for a fix later
+
+//adding the DISQUS embed.js
+if (enableDisqus && disqus_shortname) { //defined in config.js
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        dsq.setAttribute("async", "true");
+        //(document.getElementsByTagName('body')[0] || document.getElementsByTagName('head')[0]).appendChild(dsq);
+        (document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+}
+//reset function moved to geminiblog.js
+            </script>
+    </body>
+</html>

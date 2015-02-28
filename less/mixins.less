@@ -1,0 +1,68 @@
+//===============================================================
+// Mixins
+//===============================================================
+
+    .box-sizing(@box: border-box) {
+        -webkit-box-sizing: @box;
+           -moz-box-sizing: @box;
+                box-sizing: @box;
+    }
+
+    .text-shadow(@string: 0 1px 0px rgba(0,0,0,0.2)) {
+        text-shadow: @string;
+    }
+
+    .box-shadow(@string: 0 0 0px 0px rgba(0,0,0,0.2) initial) {
+      -webkit-box-shadow: @string;
+         -moz-box-shadow: @string;
+              box-shadow: @string;
+    }
+
+    .border-radius(@radius: 5px) {
+        -webkit-border-radius: @radius;
+           -moz-border-radius: @radius;
+                border-radius: @radius;
+        -webkit-background-clip: padding-box;
+           -moz-background-clip: padding;
+                background-clip: padding-box;
+    }
+
+    .opacity(@perc) {
+        -webkit-opacity: @perc/100;
+           -moz-opacity: @perc/100;
+                opacity: @perc/100;
+                 filter: ~"alpha(opacity={@perc})"; // < IE8
+
+    }
+
+    .transition-smooth(@dur: 0.3s, @ease: 0s) {
+        -mozilla-transition: all @dur ease @ease;
+         -webkit-transition: all @dur ease @ease;
+              -o-transition: all @dur ease @ease;
+                 transition: all @dur ease @ease;
+    }
+
+    .sidebar { // left sidebar
+        min-width: @sidebar-min-width;
+        width: @sidebar-width;
+        float:left;
+        position:fixed;
+        @media print, screen and (min-width: 1280px) { width: 310px; }
+        @media print, screen and (min-width: 961px) { padding: 2em 0 0 0;} //960 causing weird jumps
+    }
+
+    .continuous { //continuous layout below 960px
+        float: none;
+        position: static;
+        width: auto;
+    }
+
+    .sweetalic { // that sweet italic font Lora
+        font-family: @font-family-emp;
+        font-style: italic;
+    }
+
+    .test { // use to emphasize the block under test
+        border: 1px solid black;
+    }
+

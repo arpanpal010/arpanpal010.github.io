@@ -1,508 +1,528 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8"/>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="keywords" content="arpan, pal, arpanpal010, profile, portfolio, web, developer, application, programmer, analyst, full, stack, freelancer, administrator, frontend, backend, database, server"/>
+        <meta name="description" content="Projects of Arpan Pal, web developer, application programmer, analyst, freelancer"/>
+        <meta name="author" content="Arpan Pal"/>
 
-		<title>Projects - arpanpal010.github.io</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
-		<link rel="stylesheet" href="./stylesheets/styles.css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <title>Projects of Arpan Pal - arpanpal010.github.io</title>
 
-		<script>
-			function toggle( tabGroup, tabId ) { //script to toggle content displayed in section_tabs, default=0 follows #anchors
-				//collect all ids
-				var sel = document.getElementsByClassName(tabGroup);
-				var anchor = document.location.hash.substring(1);
-				//get id to display if not defined, try anchor or default=0
-				//set default
-				ids=sel[0].id;
-				//if tab specified
-				if ( tabId )
-					{ ids = tabId; }
-				//if has anchor
-				else if ( anchor != '' ) {
-					//change if matches anchor
-					for (var i=0; i< sel.length; i++) {
-						if (anchor == sel[i].id) { ids=anchor; }
-						//else { ids = sel[0].id; }
-					}
-				}
-				//alert(anchor+" "+ ids);
-				//hide all not selected
-				for (i=0; i<sel.length; i++) {
-					if (sel[i].id == ids) { 
-						sel[i].style.display = 'block'; 
-					}
-					else {
-						 sel[i].style.display = 'none'; 
-					}
-				}
-				//toggle selected
-				//if (document.getElementById(ids).style.display != 'block') {
-				//	document.getElementById(ids).style.display = 'block';}
-				//else {
-				//	document.getElementById(ids).style.display = 'none'; }
-				//alert(ids)
-				return false;
-			}
-		</script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 
-		<!--[if lt IE 9]>
-			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+            <![endif]-->
 
-	<body>
+            <!--less and fallback css-->
+            <link rel="stylesheet" href="./stylesheets/styles.css">
+            <!--link rel="stylesheet/less" type="text/css" href="./less/main.less">
+                <script>
+less = {
+    env             : "development", // "production"
+    logLevel        : 2,
+    async           : true,          // false
+    fileAsync       : true,          // false
+    poll            : 1000,          // seconds
+    functions       : {},
+    dumpLineNumbers : "",            // "comments", "mediaquery", "all"
+    relativeUrls    : false,         //
+    globalVars      : {},            //
+    rootpath        : ""             //
+};
+                </script>
+                <script src="./js/less.min.js"></script-->
+    </head>
 
-		<div id="contents-wrapper">
+    <body>
 
-<!--Header-->
-			<header>
-	<!--Navigation + Links-->
-				<nav class="center">
-					<a class="nav-item" href="index.html">Home</a>
-					<a class="nav-item" href="projects.html">Projects</a>
-					<a class="nav-item" href="resume.html">Resum&#233;</a>
-					<!--a class="nav-item" href="#blog">Blog</a>
-					<a class="nav-item" href="https://github.com/arpanpal010">Gits</a>
-					<a class="nav-item" href="https://gist.github.com/arpanpal010">Gists</a-->
-				</nav>
-			</header>
-<!--Aside-->
-			<aside>
-	<!--Project tabs-->
-				<div class="tabs">
-					<ul class="center" style="padding-left:0;">
-						<li>
-							<a href="#archinst" onclick="toggle('section_tabs', 'archinst');">ArchInst</a>
-						</li>
-						<li>
-							<a href="#clinss" onclick="toggle('section_tabs', 'clinss');">Clinss@Fire 13</a>
-						</li>
-						<li>
-							<a href="#mbusb" onclick="toggle('section_tabs', 'mbusb');">Multiboot USB</a>
-						</li>
-						<li>
-							<a href="#webapps" onclick="toggle('section_tabs', 'webapps');">Web Apps</a>
-						</li>
-						<li>
-							<a href="#rpi" onclick="toggle('section_tabs', 'rpi');">Raspberry Pi</a>
-						</li>
-						<li>
-							<a href="#scripts" onclick="toggle('section_tabs', 'scripts');">Scripts</a>
-						</li>
-					</ul>
-				</div>
-			</aside>
+        <div id="contents-wrapper">
 
-<!--Section-->
-			<section>
-	<!--Projects-->
-				<div class="section_tabs_wrapper">
-		<!--default-->
-					<!--div id="filler" class="section_tabs" style="display:block;">
-						filler text - displayed by default
-						<div class="anchor">
-							<h2>Heading</h2>
-			<!tagit>
-							<a class="tagit" href="https://github.com/arpanpal010/no-such-git" target="_blank">/no-such-git/</a>
-						</div>
-						<hr/>
-			<!description>
-						<p></p>
-			<!Link to github>
-						<p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/no-such-git" target="_blank">Github</a>.</p>
-					</div-->
+            <!--Header-->
+            <header>
+                <!--Navigation + Links-->
+                <nav class="center">
+                    <a class="nav-item" href="index.html">Home</a>
+                    <a class="nav-item" href="projects.html">Projects</a>
+                    <!--a class="nav-item" href="resume.html">Resum&#233;</a-->
+                    <a class="nav-item" href="blog.html">Blog</a>
+                    <!--a class="nav-item" href="https://github.com/arpanpal010">Gits</a>
+                        <a class="nav-item" href="https://gist.github.com/arpanpal010">Gists</a-->
+                </nav>
+            </header>
+            <!--Aside-->
+            <aside>
+                <!--Project tabs-->
+                <div id="aside-container">
+                    <div id="tabs">
+                        <ul class="center" style="padding-left:0;">
+                            <li>
+                                <a href="#!archinst" onclick="toggle('section-tabs', '!archinst');">ArchInst</a>
+                            </li>
+                            <li>
+                                <a href="#!clinss" onclick="toggle('section-tabs', '!clinss');">Cl!nss@Fire 13</a>
+                            </li>
+                            <li>
+                                <a href="#!mbusb" onclick="toggle('section-tabs', '!mbusb');">Multiboot USB</a>
+                            </li>
+                            <li>
+                                <a href="#!webapps" onclick="toggle('section-tabs', '!webapps');">Web Apps</a>
+                            </li>
+                            <li>
+                                <a href="#!rpi" onclick="toggle('section-tabs', '!rpi');">Raspberry Pi</a>
+                            </li>
+                            <li>
+                                <a href="#!scripts" onclick="toggle('section-tabs', '!scripts');">Scripts</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
 
-<!-- ######################################################### -->
+            <!--Section-->
+            <section>
+                <!--Projects-->
+                <div class="section-tabs_wrapper">
+                    <!--default-->
+                    <!--div id="filler" class="section-tabs" style="display:block;">
+                        filler text - displayed by default
+                        <div class="anchor">
+                        <h2>Heading</h2>
+                        <!tagit>
+                        <a class="tagit" href="https://github.com/arpanpal010/no-such-git" target="_blank">/no-such-git/</a>
+                        </div>
+                        <hr/>
+                        <!description>
+                        <p></p>
+                        <!Link to github>
+                        <p><u>Checkout on</u> <a class="boxtext" href="https://github.com/arpanpal010/no-such-git" target="_blank">Github</a>.</p>
+                        </div-->
 
-		<!--archinst-->
-					<article id="archinst" class="section_tabs">
-						<div class="anchor">
-			<!--tagit-->
-							<a class="tagit" href="https://github.com/arpanpal010/archinst" target="_blank">
-								<em>/archinst/</em>
-							</a>
-							<h1>ArchInst</h1>
-						</div>
-						<hr/>
-						<h3 style="margin-left:0px; text-decoration: none;">Semi-interactive install script for <a href="https://www.archlinux.org/" target="_blank"><u>Arch Linux</u></a>.</h3>
+                        <!-- ######################################################### -->
 
-						<p> The script, written in <a href="www.gnu.org/software/bash/"><strong>bash</strong></a> (apologies to zsh users), carries out a combination of customizable tasks for both beginner or advanced users, and automates the somewhat tedious task of installation. It works for both x86 and x86_64 architecture, although includes some post-installation tasks that are useful in other systems as well. It is highly customizable and per-system configurations are allowed, however, being <a href="https://wiki.archlinux.org/index.php/The_Arch_Way" target="_blank"><em>Arch Linux</em></a>, might require a bit of experience with linux (or reading the <a href="https://wiki.archlinux.org/" target="_blank"><em>ArchWiki</em></a>).
-						</p>
+                        <!--archinst-->
+                        <article id="!archinst" class="section-tabs">
+                            <div class="anchor">
+                                <!--tagit-->
+                                <a class="tagit" href="https://github.com/arpanpal010/archinst" target="_blank">
+                                    <em>/archinst/</em>
+                                </a>
+                                <h1>ArchInst</h1>
+                            </div>
+                            <hr/>
+                            <h3 style="margin-left:0px; text-decoration: none;">Semi-interactive install script for <a href="https://www.archlinux.org/" target="_blank">Arch Linux</a>.</h3>
 
-						<p>The procedure of installing archlinux comprises of a total 4 stages to setup upto the administrator account, and
-						another one to setup the user account specific settings. Namely these stages and the steps they perform are described below.</p>
+                            <p> The script, written in <a href="http://www.gnu.org/software/bash/"><em>bash</em></a> (apologies to zsh users), carries out a combination of customizable tasks for both beginner or advanced users, and automates the somewhat tedious task of installation. It works for both x86 and x86_64 architecture, although includes some post-installation tasks that are useful in other systems as well. It is highly customizable and per-system configurations are allowed, however, being <a href="https://wiki.archlinux.org/index.php/The_Arch_Way" target="_blank"><em>Arch Linux</em></a>, might require a bit of experience with linux (or reading the <a href="https://wiki.archlinux.org/" target="_blank"><em>ArchWiki</em></a>).
+                            </p>
 
-						<ol>
-							<li>
-								<u><a onclick="toggle('archinst_tabs', 'preboot');" style="cursor: pointer;">Pre-Boot</a></u>
-								<div id="preboot" class="archinst_tabs">
-									<ul>
-										<li>Download ISO from any of the <a href="https://www.archlinux.org/download/#download-mirrors" target="_blank"><em>mirrors</em></a>.</li>
-										<li>Verify ISO with the signature file.</li>
-										<li>Write ISO to USB.</li>
-										<li>Boot device with USB. (Preferably with help of user.)</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<u><a onclick="toggle('archinst_tabs', 'preinst');" style="cursor: pointer;">Pre-Installation</a></u>
-								<div id="preinst" class="archinst_tabs">
-									<ul>
-										<li>Set time to localtime.</li>
-										<li>Check if UEFI-boot. (Does not support UEFI, yet.)</li>
-										<li>Update mirrorlist for pacman.</li>
-										<li>Mount block devices to their places, /, /boot, /home, etc.</li>
-										<li>Run pacstrap.</li>
-										<li>Generate fstab.</li>
-										<li>Chroot.</li>
-										<li>Run post-installation. (See next-step)</li>
-										<li>Unmount and reboot.</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<u><a onclick="toggle('archinst_tabs', 'postinst');" style="cursor: pointer;">Post-Installation</a></u>
-								<div id="postinst" class="archinst_tabs">
-									<ul>
-										<li>Set hostname.</li>
-										<li>Set root password.</li>
-										<li>Generate system locales.</li>
-										<li>Set system time.</li>
-										<li>Generate initial ramdisk.</li>
-										<li>Install a bootloader (<a href="https://www.gnu.org/software/grub/" target="_blank"><em>grub2</em></a>), and scan to detect other OS if dual booting.
-										</li>
-										<li>Create administrator account/set password.</li>
-										<li>Give sudo privilege to group 'wheel'.</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<u><a onclick="toggle('archinst_tabs', 'sysconf');" style="cursor: pointer;">System Configuration</a></u>
-								<div id="sysconf" class="archinst_tabs">
-									<ul>
-										<li>Enable multilib. (if x86_64)</li>
-										<li>Install default packages.</li>
-										<li>Setup basic firewall with <a href="http://ipset.netfilter.org/iptables.man.html" target="_blank"><em>iptables</em></a>.</li>
-										<li>Start system services.</li>
-										<li>Run initial <a href="http://rkhunter.sourceforge.net/" target="_blank"><em>rkhunter</em></a> scan.</li>
-										<li>Run <a href="http://www.lm-sensors.org/" target="_blank"><em>lm_sensors</em></a> scan.</li>
-										<li>Install additional packages. (if configured as such)</li>
-										<li>Start services.</li>
-									</ul>
-								</div>
-							</li>
-							<li>
-								<u><a onclick="toggle('archinst_tabs', 'userconf');" style="cursor: pointer;">User Configuration</a></u>
-								<div id="userconf" class="archinst_tabs">
-									<ul>
-										<li>Generate private-public keypairs for ssh.</li>
-										<li>Install yaourt.</li>
-										<li>install AUR packages.</li>
-										<li>Setup/restore user configurations (git + <a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank"><em>linkthedots.sh</em></a>).</li>
-									</ul>
-								</div>
-							</li>
-						</ol>
-						<script> toggle('archinst_tabs'); </script>
-						<br/>
-			<!--Link to github-->
-						<p>Checkout on <a href="https://github.com/arpanpal010/archinst" target="_blank"><strong>Github</strong></a>.</p>
-					</article>
+                            <p>The procedure of installing archlinux comprises of a total 4 stages to setup upto the administrator account, and
+                            another one to setup the user account specific settings. Namely these stages and the steps they perform are described below.</p>
 
-<!-- ######################################################### -->
+                            <ol>
+                                <li>
+                                    <u><!--a onclick="toggle('archinst_tabs', 'preboot');" style="cursor: pointer;"-->Pre-Boot<!--/a--></u>
+                                    <div id="preboot" class="archinst_tabs">
+                                        <ul>
+                                            <li>Download ISO from any of the <a href="https://www.archlinux.org/download/#download-mirrors" target="_blank"><em>mirrors</em></a>.</li>
+                                            <li>Verify ISO with the signature file.</li>
+                                            <li>Write ISO to USB.</li>
+                                            <li>Boot device with USB. (Preferably with help of user.)</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <u><!--a onclick="toggle('archinst_tabs', 'preinst');" style="cursor: pointer;"-->Pre-Installation<!--/a--></u>
+                                    <div id="preinst" class="archinst_tabs">
+                                        <ul>
+                                            <li>Set time to localtime.</li>
+                                            <li>Check if UEFI-boot. (Does not support UEFI, yet.)</li>
+                                            <li>Update mirrorlist for pacman.</li>
+                                            <li>Mount block devices to their places, /, /boot, /home, etc.</li>
+                                            <li>Run pacstrap.</li>
+                                            <li>Generate fstab.</li>
+                                            <li>Chroot.</li>
+                                            <li>Run post-installation. (See next-step)</li>
+                                            <li>Unmount and reboot.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <u><!--a onclick="toggle('archinst_tabs', 'postinst');" style="cursor: pointer;"-->Post-Installation<!--/a--></u>
+                                    <div id="postinst" class="archinst_tabs">
+                                        <ul>
+                                            <li>Set hostname.</li>
+                                            <li>Set root password.</li>
+                                            <li>Generate system locales.</li>
+                                            <li>Set system time.</li>
+                                            <li>Generate initial ramdisk.</li>
+                                            <li>Install a bootloader (<a href="https://www.gnu.org/software/grub/" target="_blank"><em>grub2</em></a>), and scan to detect other OS if dual booting.
+                                            </li>
+                                            <li>Create administrator account/set password.</li>
+                                            <li>Give sudo privilege to group 'wheel'.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <u><!--a onclick="toggle('archinst_tabs', 'sysconf');" style="cursor: pointer;"-->System Configuration<!--/a--></u>
+                                    <div id="sysconf" class="archinst_tabs">
+                                        <ul>
+                                            <li>Enable multilib. (if x86_64)</li>
+                                            <li>Install default packages.</li>
+                                            <li>Setup basic firewall with <a href="http://ipset.netfilter.org/iptables.man.html" target="_blank"><em>iptables</em></a>.</li>
+                                            <li>Start system services.</li>
+                                            <li>Run initial <a href="http://rkhunter.sourceforge.net/" target="_blank"><em>rkhunter</em></a> scan.</li>
+                                            <li>Run <a href="http://www.lm-sensors.org/" target="_blank"><em>lm_sensors</em></a> scan.</li>
+                                            <li>Install additional packages. (if configured as such)</li>
+                                            <li>Start services.</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <u><!--a onclick="toggle('archinst_tabs', 'userconf');" style="cursor: pointer;"-->User Configuration<!--/a--></u>
+                                    <div id="userconf" class="archinst_tabs">
+                                        <ul>
+                                            <li>Generate private-public keypairs for ssh.</li>
+                                            <li>Install yaourt.</li>
+                                            <li>install AUR packages.</li>
+                                            <li>Setup/restore user configurations (git + <a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank"><em>linkthedots.sh</em></a>).</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ol>
+                            <!--script> toggle('archinst_tabs'); </script-->
+                <br/>
+                <!--Link to github-->
+                <p>Checkout on <a href="https://github.com/arpanpal010/archinst" target="_blank"><em>Github</em></a>.</p>
+                        </article>
 
-		<!--clinss-->
-					<article id="clinss" class="section_tabs">
-						<div class="anchor">
-			<!--tagit-->
-							<a class="tagit" href="https://github.com/arpanpal010/clinss-fire13" target="_blank">
-								<em>/clinss-fire13/</em>
-							</a>
-							<h1>CL!NSS @ Fire'13</h1>
-						</div>
-						<hr/>
-						<h3 style="margin-left:0px; text-decoration: none;">MSc Dissertation and submission for <a href="http://users.dsic.upv.es/grupos/nle/clinss.html" target="_blank">CL!NSS</a> task at <a href="http://pan.webis.de/" target="_blank">FIRE'13</a>.</h3>
-						<p>
-						<b>Paper:</b><a href="./docs/2013-clinss-Pal-Surrey.pdf" target="_blank"> <em>Set-based Similarity Measurement and Ranking Model to Identify Cases of Journalistic Text Reuse.</em></a>
-						</p>
+                        <!-- ######################################################### -->
 
-						<p>A little bit about our approach, we first convert the English text to Hindi with Google Translate, and extract four word-groups from the text, as seen below...</p>
-						<ul style="list-style-type: none;">
-							<li><strong>title</strong> - The document title</li>
-							<li><strong>content</strong> - The content of the article </li>
-							<li><strong>unique words</strong> - in content (also called fingerprint, as it can uniquely identify the document) </li>
-							<li><strong>frequent words</strong> - an amount of words that appear most frequently in the document.
-						</ul>
-						<p>These four groups, along with their <strong>publication dates</strong>, are compared with each document in the hindi corpus and a weighted combination of these five individual similarity scores determines an overall amount of similarity between the english text and hindi text. The documents are ranked according to their final score, and a relevance table is prepared that can be checked with the provided perl script and qrel file to check the accuracy of the system.</p>
+                        <!--clinss-->
+                        <article id="!clinss" class="section-tabs">
+                            <div class="anchor">
+                                <!--tagit-->
+                                <a class="tagit" href="https://github.com/arpanpal010/clinss-fire13" target="_blank">
+                                    <em>/clinss-fire13/</em>
+                                </a>
+                                <h1>CL!NSS @ Fire'13</h1>
+                            </div>
+                            <hr/>
+                            <h3 style="margin-left:0px; text-decoration: none;">MSc Dissertation and submission for <a href="http://users.dsic.upv.es/grupos/nle/clinss.html" target="_blank">CL!NSS</a> task at <a href="http://pan.webis.de/" target="_blank">FIRE'13</a>.</h3>
+                            <p>
+                            <b>Paper:</b><a href="./docs/2013-clinss-Pal-Surrey.pdf" target="_blank"> <em>Set-based Similarity Measurement and Ranking Model to Identify Cases of Journalistic Text Reuse</em></a>.
+                            </p>
 
-						<p>We were placed 3rd by organization, with best scores of:
-						<br/><b>NDCG@1 - 0.6600, NDCG@5 - 0.5579, NDCG@10 - 0.5604</b>.</p>
+                            <p>A little bit about our approach, we first convert the English text to Hindi with Google Translate, and extract four word-groups from the text, as seen below...</p>
+                            <ul style="list-style-type: none;">
+                                <li><strong>title</strong> - The document title</li>
+                                <li><strong>content</strong> - The content of the article </li>
+                                <li><strong>unique words</strong> - in content (also called fingerprint, as it can uniquely identify the document) </li>
+                                <li><strong>frequent words</strong> - an amount of words that appear most frequently in the document.
+                            </ul>
+                            <p>These four groups, along with their <strong>publication dates</strong>, are compared with each document in the hindi corpus and a weighted combination of these five individual similarity scores determines an overall amount of similarity between the english text and hindi text. The documents are ranked according to their final score, and a relevance table is prepared that can be checked with the provided perl script and qrel file to check the accuracy of the system.</p>
 
-						<p>Although this system is made mainly to be merely a filtration process to determine a list of potential candidates that can be checked by more resource heavy processes, it seems there exists definite room for improvement.</p>
-			<!--Link to github-->
-						<p>Checkout on <a href="https://github.com/arpanpal010/clinss-fire13" target="_blank"><strong>Github</strong></a>.</p>
-					</article>
+                            <p>We were placed 3rd by organization, with best scores of:
+                            <br/><b>NDCG@1 - 0.6600, NDCG@5 - 0.5579, NDCG@10 - 0.5604</b>.</p>
 
-<!-- ######################################################### -->
+                            <p>Although this system is made mainly to be merely a filtration process to determine a list of potential candidates that can be checked by more resource heavy processes, it seems there exists definite room for improvement.</p>
+                            <!--Link to github-->
+                            <p>Checkout on <a href="https://github.com/arpanpal010/clinss-fire13" target="_blank"><em>Github</em></a>.</p>
+                        </article>
 
-		<!--mbusb-->
-					<article id="mbusb" class="section_tabs">
-						<div class="anchor">
-			<!--tagit-->
-							<a class="tagit" href="https://github.com/arpanpal010/mbusb" target="_blank">
-								<em>/mbusb/</em>
-							</a>
-							<h1>Multi-Boot USB</h1>
-						</div>
-						<hr/>
-						<h3 style="margin-left:0px; text-decoration: none;">One USB to rule them all.</h3>
-						<p>This project allows more than one Operating System to boot from a single USB, currently only Linux/Unix based ones. Very helpful to distro-hoppers, but supports a bunch of system tools to reset, clean, image, or maintain systems that experienced users might find useful as well.</p>
+                        <!-- ######################################################### -->
 
-						<p>This is a popular method to boot multiple LiveCDs or Bootable versions of systems off of a FAT32 (vfat) formatted USB drive, and there is no limit on the number of OSs, as long the USB does not run out of space. The bootloader used here is <a href="https://www.gnu.org/software/grub/" target="_blank"><strong>grub2</strong></a>,for  booting the ISOs in loopback mode.The USB can boot both x86 and x86_64 architecture ISOs, however if the CPU architecture does not support 64bit addressing scheme, the 64bit option is automatically hidden in the boot menu.</p>
+                        <!--mbusb-->
+                        <article id="!mbusb" class="section-tabs">
+                            <div class="anchor">
+                                <!--tagit-->
+                                <a class="tagit" href="https://github.com/arpanpal010/mbusb" target="_blank">
+                                    <em>/mbusb/</em>
+                                </a>
+                                <h1>Multi-Boot USB</h1>
+                            </div>
+                            <hr/>
+                            <h3 style="margin-left:0px; text-decoration: none;">One USB to rule them all.</h3>
+                            <p>This project allows more than one Operating System to boot from a single USB, currently only Linux/Unix based ones. Very helpful to distro-hoppers, but supports a bunch of system tools to reset, clean, image, or maintain systems that experienced users might find useful as well.</p>
 
-						<h3>List of supported OS(s):</h3>
-						<ul style="margin-left: 15px;">
-							<li><u>Android x86</u>
-								<ul>
-									<li>4.4 RC2</li>
-								</ul>
-							</li>
-							<li><u>GNU/Linux</u>
-								<ul>
-									<li>Arch Linux 2014.08.01</li>
-									<li>Debian Wheezy</li>
-									<li>Linux Mint 17 Quiana</li>
-									<li>GRML 2014.03</li>
-									<li>Ubuntu 14.04</li>
-									<li>Kali Linux 1.0.7</li>
-								</ul>
-							</li>
-							<li><u>Tools</u>
-								<ul>
-									<li>SystemRescueCD x86 4.2.0</li>
-									<li>GParted Live 0.18.0-2</li>
-									<li>Clonezilla Live 20140331</li>
-									<li>DBAN 2.2.8</li>
-									<li>Memtest86+ 5.01</li>
-								</ul>
-							</li>
-						</ul>
-			<!--Link to github-->
-						<p>Checkout on <a href="https://github.com/arpanpal010/mbusb" target="_blank"><strong>Github</strong></a>.</p>
-					</article>
+                            <p>This is a popular method to boot multiple LiveCDs or Bootable versions of systems off of a FAT32 (vfat) formatted USB drive, and there is no limit on the number of OSs, as long the USB does not run out of space. The bootloader used here is <a href="https://www.gnu.org/software/grub/" target="_blank"><em>grub2</em></a>,for  booting the ISOs in loopback mode.The USB can boot both x86 and x86_64 architecture ISOs, however if the CPU architecture does not support 64bit addressing scheme, the 64bit option is automatically hidden in the boot menu.</p>
 
-<!-- ######################################################### -->
+                            <h3>List of supported OS(s):</h3>
+                            <ul style="margin-left: 15px;">
+                                <li><u>Android x86</u>
+                                    <ul>
+                                        <li>4.4 RC2</li>
+                                    </ul>
+                                </li>
+                                <li><u>GNU/Linux</u>
+                                    <ul>
+                                        <li>Arch Linux 2014.08.01</li>
+                                        <li>Debian Wheezy</li>
+                                        <li>Linux Mint 17 Quiana</li>
+                                        <li>GRML 2014.03</li>
+                                        <li>Ubuntu 14.04</li>
+                                        <li>Kali Linux 1.0.7</li>
+                                    </ul>
+                                </li>
+                                <li><u>Tools</u>
+                                    <ul>
+                                        <li>SystemRescueCD x86 4.2.0</li>
+                                        <li>GParted Live 0.18.0-2</li>
+                                        <li>Clonezilla Live 20140331</li>
+                                        <li>DBAN 2.2.8</li>
+                                        <li>Memtest86+ 5.01</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!--Link to github-->
+                            <p>Checkout on <a href="https://github.com/arpanpal010/mbusb" target="_blank"><em>Github</em></a>.</p>
+                        </article>
 
-		<!--rpi-->
-					<article id="rpi" class="section_tabs">
-						<div class="anchor">
-			<!--tagit-->
-							<a class="tagit" href="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7" target="_blank">
-								<em>/rpi/</em>
-							</a>
-							<h1>Raspberry Pi</h1>
-						</div>
-						<hr/>
-						<p>I've been an owner of a <a href="http://www.raspberrypi.org/"><strong>Raspberry Pi Model B</strong></a> since late 2012, and over the years I've done some pretty cool (or sometimes nasty) stuff to it, and still now its happily running a small development (nginx/uwsgi/django stack) server along with dns service, private git repo, mumble server and file storage service, which can be partially accessed or administered from the internet. I think its time I begin to document/gather information that might help those who need it. Plus I can just copy stuff off here when I reset it which is more often than I would like to admit.</p>
+                        <!-- ######################################################### -->
 
-						<p>[Before I can setup a blog type archiving system for the posts (probably with Jekyll), or before this strategy grows too big to maintain, all bits of text will be coming from my gists, which I try to update/cleanup often]</p>
-			<!--Links to gist-->
-					<h3><a href="#sysctl.conf" onclick="toggle('rpi_tabs', 'sysctl.conf');" style="cursor: pointer;">Optimizing kernel parameters</a></h3>
-						<div id="sysctl.conf" class="rpi_tabs">
-							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=sysctl.md"></script>
-						</div>
+                        <!--webapps-->
+                        <article id="!webapps" class="section-tabs">
+                            <div class="anchor">
+                                <h1>Web Apps</h1>
+                            </div>
+                            <hr/>
+                            <p>
+                            These are some miniapps that I made while learning Javascript, mostly for personal use but also as progress markers. (The apps are only tested working in current versions of Mozilla Firefox and Chromium, so they might break in other browsers but lets hope they don't.)
+                            </p>
+                            <div>
+                                <p>
+                                <a href="https://arpanpal010.github.io/home/" title="Browser homepage" target="_blank">
+                                    <h2>Homepage</h2>
+                                </a>
+                                This is my browser homepage, served either from github or locally from my home server, for easy access to the same links on every device. Also, the multi-search bar can search a number of sites by using prefixes, and has a number of feed boxes to fetch and display news or updates via RSS feeds from multiple sites, made using pure javascript and Google Feeds API.
+                                </p>
+                                <!--Link to github-->
+                                <p>Checkout <a href="https://arpanpal010.github.io/home/" target="_blank"><em>Demo</em></a> or on <a href="https://github.com/arpanpal010/home" target="_blank"><em>Github</em></a>.</p>
+                            </div>
+                            <hr/>
+                            <div>
+                                <p>
+                                <a href="https://arpanpal010.github.io/parsemd/" title="Markdown parser" target="_blank">
+                                    <h2>ParseMD</h2>
+                                </a>
+                                Simple markdown to HTML parser using <a href="https://github.com/chjj/marked" title="Marked.js" target="_blank"><em>Marked.js</em></a>.</p>
+                                <u>Features:</u>
+                                <ul style="margin-bottom: 1em;">
+                                    <li>Convert-as-you-type.</li>
+                                    <li>Upload markdown to parse.</li>
+                                    <li>Save markdown as file after edit.</li>
+                                    <li>Preview HTML.</li>
+                                    <li>Download parsed HTML.</li>
+                                    <li>Quick and Offline-friendly.</li>
+                                </ul>
+                                <!--Link to github-->
+                                <p>Checkout <a href="https://arpanpal010.github.io/parsemd/" target="_blank"><em>Demo</em></a> or on <a href="https://github.com/arpanpal010/parsemd" target="_blank"><em>Github</em></a>.</p>
+                            </div>
+                            <hr/>
+                            <div>
+                                <p>
+                                <a href="https://arpanpal010.github.io/geminiblog/" title="geminiBlog" target="_blank">
+                                    <h2>geminiBlog</h2>
+                                </a>
+                                Static blog app written in vanilla Javascript displaying entries written in markdown, converted at the client-side into valid HTML using <a href="https://github.com/chjj/marked" title="Marked.js" target="_blank"><em>Marked.js</em></a>. Currently being used as my own <a href="./blog.html">blog</a>.</p>
+                                <u>Features:</u>
+                                <ul style="margin-bottom: 1em;">
+                                    <li>Minimal and lightweight.</li>
+                                    <li>Mobile ready.</li>
+                                    <li>Only server side service needed is storage access.</li>
+                                    <li>Can be hosted anywhere statically.</li>
+                                    <li>Markdown driven, very little technical/coding knowledge required to use.</li>
+                                </ul>
+                                <!--Link to github-->
+                                <p>Checkout <a href="https://arpanpal010.github.io/geminiblog/" target="_blank"><em>Demo</em></a>
+                                or on <a href="https://github.com/arpanpal010/geminiblog" target="_blank"><em>Github</em></a>.
+                                </p>
+                            </div>
+                        </article>
 
-					<h3><a href="#firewall" onclick="toggle('rpi_tabs', 'firewall');" style="cursor: pointer;">Basic firewall configuration with iptables</a></h3>
-						<div id="firewall" class="rpi_tabs">
-							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=firewall.md"></script>
-						</div>
+                        <!-- ######################################################### -->
 
-					<h3><a href="#dns" onclick="toggle('rpi_tabs', 'dns');" style="cursor: pointer;">Local Caching DNS Server with PDNSD</a></h3>
-						<div id="dns" class="rpi_tabs">
-							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dns.md"></script>
-						</div>
-					<h3><a href="#dyndns" onclick="toggle('rpi_tabs', 'dyndns');" style="cursor: pointer;">Dynamic DNS service (with dnsdynamic.org)</a></h3>
-						<div id="dyndns" class="rpi_tabs">
-							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=dyndns.md"></script>
-						</div>
-					<h3><a href="#git-server" onclick="toggle('rpi_tabs', 'git-server');" style="cursor: pointer;">Private GIT server</a></h3>
-						<div id="git-server" class="rpi_tabs">
-							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=git-server.md"></script>
-						</div>
-					<h3><a href="#nginx-ssl" onclick="toggle('rpi_tabs', 'nginx-ssl');" style="cursor: pointer;">Use SSL with Nginx</a></h3>
-						<div id="nginx-ssl" class="rpi_tabs">
-							<script src="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7.js?file=nginx-ssl.md"></script>
-						</div>
-					<h3><a href="#rpibackup" onclick="toggle('rpi_tabs', 'rpibackup');" style="cursor: pointer;">Backup over SCP</a></h3>
-						<div id="rpibackup" class="rpi_tabs">
-							<script src="https://gist.github.com/arpanpal010/60baf859e995425c75e5.js"></script>
-						</div>
+                        <!--rpi-->
+                        <article id="!rpi" class="section-tabs">
+                            <div class="anchor">
+                                <!--tagit-->
+                                <a class="tagit" href="https://gist.github.com/arpanpal010/a90c8c0a16a3f92decc7" target="_blank">
+                                    <em>/rpi/</em>
+                                </a>
+                                <h1>Raspberry Pi</h1>
+                            </div>
+                            <hr/>
+                            <p>I've been an owner of a <a href="http://www.raspberrypi.org/"><em>Raspberry Pi Model B</em></a> since late 2012, and over the years I've done some pretty cool (or sometimes nasty) stuff to it, and still now its happily running a small development (nginx/uwsgi/django stack) server along with dns service, private git repo, IRC/Mumble server and file storage service, which can be partially accessed or administered from the internet. I think its time I begin to document/gather information that might help those who need it. Plus I can just copy stuff off here when I reset it which is more often than I would like to admit.</p>
 
-					<script> toggle('rpi_tabs'); </script>
-				</article>
+                            <p>[Finally setup my blog, using my own single page static blogging app <a href="https://arpanpal010.github.io/geminiblog/"><em> geminiBlog</em></a>, now you can check out the posts below from this site only.]</p>
+                            <!--Links to gist-->
+                            <h3 style="text-decoration: none;"><a href="./blog.html#!post=kernel-tweaks" >Optimizing kernel parameters</a></h3>
 
-<!-- ######################################################### -->
+                            <h3 style="text-decoration: none;"><a href="./blog.html#!post=firewall---iptables">Basic firewall configuration with iptables</a></h3>
 
-		<!--webapps-->
-					<article id="webapps" class="section_tabs">
-						<div class="anchor">
-							<h1>Web Apps</h1>
-						</div>
-						<hr/>
-						<p>
-							These are some miniapps that I made while learning Javascript, mostly for personal use but also as progress markers. (The apps are only tested working in current versions of Mozilla Firefox and Chromium, so they might break in other browsers but lets hope they don't.)
-						</p>
-						<div>
-							<p>
-								<a href="https://arpanpal010.github.io/home/" title="Browser homepage" target="_blank">
-									<h2>Homepage</h2>
-								</a>
-								This is my browser homepage, served either from github or locally from my home server, for easy access to the same links on every device. Also, the multi-search bar can search a number of sites by using prefixes, and has a number of feed boxes to fetch and display news or updates via RSS feeds from multiple sites, made using pure javascript and Google Feeds API.
-							</p>
-				<!--Link to github-->
-							<p>Checkout <a href="https://arpanpal010.github.io/home/" target="_blank"><em>Demo</em></a> or on <a href="https://github.com/arpanpal010/home" target="_blank"><strong>Github</strong></a>.</p>
-						</div>
-						<hr/>
-						<div>
-							<p>
-								<a href="https://arpanpal010.github.io/parsemd/" title="Markdown parser" target="_blank">
-									<h2>ParseMD</h2>
-								</a>
-								Simple markdown to HTML parser using <a href="https://github.com/chjj/marked" title="Marked.js" target="_blank"><strong>Marked.js</strong></a>.</p>
-								<u>Features:</u>
-								<ul style="margin-bottom: 1em;">
-									<li>Convert-as-you-type.</li>
-									<li>Upload markdown to parse.</li>
-									<li>Save markdown as file after edit.</li>
-									<li>Preview HTML.</li>
-									<li>Download parsed HTML.</li>
-									<li>Quick and Offline-friendly.</li>
-								</ul>
-				<!--Link to github-->
-							<p>Checkout <a href="https://arpanpal010.github.io/parsemd/" target="_blank"><em>Demo</em></a> or on <a href="https://github.com/arpanpal010/parsemd" target="_blank"><strong>Github</strong></a>.</p>
-						</div>
-						<hr/>
-						<div>
-							<p>
-								<a href="https://arpanpal010.github.io/geminiblog/" title="geminiBlog" target="_blank">
-									<h2>geminiBlog</h2>
-								</a>
-								Static blog app written in vanilla Javascript displaying entries written in markdown, converted at the client-side into valid HTML using <a href="https://github.com/chjj/marked" title="Marked.js" target="_blank"><strong>Marked.js</strong></a>.</p>
-								<u>Features:</u>
-								<ul style="margin-bottom: 1em;">
-									<li>Minimal and lightweight.</li>
-									<li>Mobile ready.</li>
-									<li>Only server side service needed is storage access.</li>
-									<li>Can be hosted anywhere statically.</li>
-									<li>Markdown driven, very little technical/coding knowledge required to use.</li>
-								</ul>
-				<!--Link to github-->
-							<p>Checkout <a href="https://arpanpal010.github.io/geminiblog/" target="_blank"><em>Demo</em></a>
-								 or on <a href="https://github.com/arpanpal010/geminiblog" target="_blank"><strong>Github</strong></a>.
-							</p>
-						</div>
-					</article>
+                            <h3 style="text-decoration: none;"><a href="./blog.html#!post=local-dns-server">Local Caching DNS Server with PDNSD</a></h3>
 
-<!-- ######################################################### -->
+                            <h3 style="text-decoration: none;"><a href="./blog.html#!post=dynamic-dns">Dynamic DNS service (with dnsdynamic.org)</a></h3>
 
-		<!--scripts-->
-					<article id="scripts" class="section_tabs">
-						<div class="anchor">
-			<!--tagit-->
-							<a class="tagit" href="https://gist.github.com/arpanpal010" target="_blank"><em>/gists/</em></a>
-							<h1>Scripts</h1>
-						</div>
-						<hr/>
-						<p>Recently cleaned up my gists and removed all but only the scripts/code-snippets that are actually useful without heavy modification.</p>
+                            <h3 style="text-decoration: none;"><a href="./blog.html#!post=personal-gits">Personal GIT server</a></h3>
 
-						Currently it contains:
-						<table>
-							<!--tr template>
-								<td>
-									<a href="" target="_blank">scriptname</a>
-								</td>
-								<td>
-									description
-								</td>
-							</tr-->
-							<tr>
-								<td>
-									<a href="https://gist.github.com/arpanpal010/3d5a7e6a08fe42899a69" target="_blank"><em>gfeed2js.js</em></a>
-								</td>
-								<td>
-									Simple RSS feed parser using only Javascript and Google Feeds API.
-									(used in my custom browser <a href="https://arpanpal010.github.io/home/" target="_blank"><strong>homepage</strong></a>)
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://gist.github.com/arpanpal010/41f927fc78832983d259" target="_blank"><em>deduplicate.py</em></a>
-								</td>
-								<td>
-									Simple file duplicate detector and (re)mover using SHA1 hashing (python2.7)
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank"><em>linkthedots.sh</em></a>
-								</td>
-								<td>
-									Copies/moves various files from its own backup dir, to their proper places. (Mostly used to backup/push dotfiles to their own places)
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://gist.github.com/arpanpal010/b05146ef575c049ec94e" target="_blank"><em>getter_media.sh</em></a>
-								</td>
-								<td>
-									Recursively fetch movie/character/name IDs from the <a href="http://www.imdb.com/" target="_blank"><strong>mothership</strong></a>.
-									Update: Fetch actual information (JSON/XML) from <a href="http://myapifilms.com" target="_blank"><strong>MyAPIFilms</strong></a>.
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://gist.github.com/arpanpal010/0c6d38981061f93f76a1" target="_blank"><em>passgen.sh</em></a>
-								</td>
-								<td>
-									Very High entropy obfuscated memoryless password generator.
-									(Using SHA1 hashing and base64 encoding.)
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<a href="https://gist.github.com/arpanpal010/ac9f610316d709da53aa" target="_blank"><em>cryptmount.sh</em></a>
-								</td>
-								<td>
-									Simple command-line interface to dm-crypt with LUKS.
-									(So far,create container, decrypt, encrypt, extend)
-								</td>
-							</tr>
-						</table>
-						<br/>
-			<!--Link to github-->
-						<p>View all my <a href="https://gist.github.com/arpanpal010" target="_blank"><strong>gists</strong></a>.</p>
-					</div>
+                            <h3 style="text-decoration: none;"><a href="./blog.html#!post=ssl-with-nginx">Use SSL with Nginx</a></h3>
 
-		<!---->
-				</article>
-			</section>
+                            <h3 style="text-decoration: none;"><a href="https://gist.github.com/arpanpal010/60baf859e995425c75e5">Backup over SCP(gist)</a></h3>
 
-<!--Footer-->
-			<footer class="clear center">
-				<p>
-					&copy; Arpan Pal<br/>
-					<small>Hosted on GitHub Pages<!-- &mdash; Theme based on <a href="http://orderedlist.com/minimal/" target="_blank"><strong>'minimal'</strong></a> by <a href="https://github.com/orderedlist" target="_blank"><strong>orderedlist</strong></a--></small>
-				</p>
-			<!--Top Button-->
-				<!--div class="btntop"><a href="#"><b style="font-size: 20px;">&#x21E7;</b><br><b>TOP</b></a></div-->
-			</footer>
+                        </article>
 
-		</div>
+                        <!-- ######################################################### -->
 
-		<script src="./javascripts/scale.fix.js"></script>
-		<script> toggle('section_tabs'); </script>
-	</body>
+                        <!--scripts-->
+                        <article id="!scripts" class="section-tabs">
+                            <div class="anchor">
+                                <!--tagit-->
+                                <a class="tagit" href="https://gist.github.com/arpanpal010" target="_blank"><em>/gists/</em></a>
+                                <h1>Scripts</h1>
+                            </div>
+                            <hr/>
+                            <p>Recently cleaned up my gists and removed all but only the scripts/code-snippets that are actually useful without heavy modification.</p>
+
+                            Currently it contains:
+                            <table>
+                                <!--tr template>
+                                    <td>
+                                    <a href="" target="_blank">scriptname</a>
+                                    </td>
+                                    <td>
+                                    description
+                                    </td>
+                                    </tr-->
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/6ed939b81764c264338c" target="_blank"><em>chatbox.py</em></a>
+                                        </td>
+                                        <td>
+                                            Minimal text-based discussion board written using http.server in python3.
+                                            Single threaded, auto refreshes. Exactly 100 lines of code.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/09ceafb48d95a95e890b" target="_blank"><em>tbkp.sh</em></a>
+                                        </td>
+                                        <td>
+                                            Tar-based backup script to perform once or incremental backups, can select snapshots(if available) when backing up or restoring.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/3d5a7e6a08fe42899a69" target="_blank"><em>gfeed2js.js</em></a>
+                                        </td>
+                                        <td>
+                                            Simple RSS feed parser using only Javascript and Google Feeds API.
+                                            (used in my custom browser <a href="https://arpanpal010.github.io/home/" target="_blank"><em>homepage</em></a>)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/41f927fc78832983d259" target="_blank"><em>deduplicate.py</em></a>
+                                        </td>
+                                        <td>
+                                            Simple file duplicate detector and (re)mover using SHA1 hashing (python2.7)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/b23e19787a5216c54c1e" target="_blank"><em>linkthedots.sh</em></a>
+                                        </td>
+                                        <td>
+                                            Copies/moves various files from its own backup dir, to their proper places. (Mostly used to backup/push dotfiles to their own places)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/b05146ef575c049ec94e" target="_blank"><em>getter_media.sh</em></a>
+                                        </td>
+                                        <td>
+                                            Recursively fetch movie/character/name IDs from the <a href="http://www.imdb.com/" target="_blank"><em>mothership</em></a>.
+                                            Update: Fetch actual information (JSON/XML) from <a href="http://myapifilms.com" target="_blank"><em>MyAPIFilms</em></a>.
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/0c6d38981061f93f76a1" target="_blank"><em>passgen.sh</em></a>
+                                        </td>
+                                        <td>
+                                            Very High entropy obfuscated memoryless password generator.
+                                            (Using SHA1 hashing and base64 encoding.)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="https://gist.github.com/arpanpal010/ac9f610316d709da53aa" target="_blank"><em>cryptmount.sh</em></a>
+                                        </td>
+                                        <td>
+                                            Simple command-line interface to dm-crypt with LUKS.
+                                            (So far,create container, decrypt, encrypt, extend)
+                                        </td>
+                                    </tr>
+                            </table>
+                            <br/>
+                            <!--Link to github-->
+                            <p>View all my <a href="https://gist.github.com/arpanpal010" target="_blank"><em>gists</em></a>.</p>
+        </div>
+
+        <!---->
+                        </article>
+            </section>
+
+            <!--Footer-->
+            <footer class="clear center">
+                <p>
+                &copy; Arpan Pal<br/>
+                <small>Hosted on GitHub Pages<!-- &mdash; Theme based on <a href="http://orderedlist.com/minimal/" target="_blank"><strong>'minimal'</strong></a> by <a href="https://github.com/orderedlist" target="_blank"><strong>orderedlist</strong></a--></small>
+                </p>
+                <!--Top Button-->
+                <!--div class="btntop"><a href="#"><b style="font-size: 20px;">&#x21E7;</b><br><b>TOP</b></a></div-->
+            </footer>
+            </div>
+            <script src="./js/scale.fix.js"></script>
+            <script>
+function toggle( tabGroup, tabId ) { //script to toggle content displayed in section-tabs, default=0 follows #anchors
+    //collect all ids
+    var sel = document.getElementsByClassName(tabGroup);
+    //add effect
+    var anchor = document.location.hash.substring(1);
+    //get id to display if not defined, try anchor or default=0
+    //set default
+    ids=sel[0].id;
+    //if tab specified
+    if ( tabId ) { ids = tabId; }
+    //if has anchor
+    else if ( anchor != '' ) {
+        //change if matches anchor
+        for (var i=0; i< sel.length; i++) {
+            if (anchor == sel[i].id) { ids=anchor; }
+            //else { ids = sel[0].id; }
+        }
+    }
+    //alert(anchor+" "+ ids);
+    //hide all not selected
+    for (i=0; i<sel.length; i++) {
+        if (sel[i].id == ids) {
+            sel[i].style.display = 'block';
+        }
+        else { sel[i].style.display = 'none'; }
+        //if (sel[i].id === ids) { fxIn(sel[i]);}
+        //else { fxOut(sel[i]);}
+    }
+    //toggle selected
+    //if (document.getElementById(ids).style.display != 'block') {
+    //  document.getElementById(ids).style.display = 'block';}
+    //else {
+    //  document.getElementById(ids).style.display = 'none'; }
+    //alert(ids)
+}
+                </script>
+            <script> toggle('section-tabs'); </script>
+    </body>
 </html>
