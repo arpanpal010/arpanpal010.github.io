@@ -9,6 +9,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 
+        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
         <title>Portfolio of Arpan Pal - arpanpal.in</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
@@ -96,7 +99,7 @@ less = {
                     Now-a-days I spend much of my free time on freelance programming or webdev projects and the rest multitasking between my own projects and responsibilities. I like to follow modern best-practices and make modular, legible and extensible code while keeping time and simplicity in mind. I hate doing the same things twice, so I usually write a bunch of short scripts or code snippets that make my life easier.
                     </p>
                     <p>
-                    Currently <del>looking for a <!--strong-->development position<!--/strong--></del> <em>spitting JS/Angular.js with the </em><strong>IMC team</strong> while gaining some hands-on experience on corporate technologies and workflows. However, feel free to <a href="mailto: arpan.pal010@gmail.com"><em>send me word</em></a> regarding freelance projects, definitely if you think you're building something <strong>awesome</strong>.
+                    Currently <del>looking for a <!--strong-->development position<!--/strong--></del> <em>spitting JS/Angular.js with the </em><strong>IMC team</strong> while gaining some hands-on experience on corporate technologies and workflows. However, feel free to <a href="#contact" onclick="document.getElementById('email-field').focus();"><em>send me word</em></a> regarding freelance projects, definitely if you think you're building something <strong>awesome</strong>.
                     </p>
                 </article>
 
@@ -243,15 +246,26 @@ less = {
                     <!--pre>My resum&#233; is available as <a href="./docs/ArpanPal.pdf" target="_blank"><em>&lt;PDF&gt;</em></a>.--><!-- &#47; <a href="docs/ArpanPal.docx" target="_blank"><i>&lt;DOCX&gt;</i></a> &#47; <a href="docs/ArpanPal.txt" target="_blank"><i>&lt;TEXT&gt;</i></a></pre-->
                 </article>
 
-                <!--About-->
-                <!--article style=""-->
-                <!--div class="anchor" style="padding-top: 0">
-                    <h2 id="about">About me</h2>
-                    </div-
-                    <hr/-->
-                    <!--/article-->
+                <article> 
+                    <div class="anchor" style="padding-top:0;">
+                        <h2 id="contact">Contact</h2>
+                    </div>
+                    <hr/>
+                    <p>If you're constantly dabbling in new technologies, and want to make (or remake something old into) something new, or just easily impressed, do drop me a line..
+                    <form id="contact-formspree" action="//formspree.io/arpan.pal010@gmail.com" method="POST">
+                        <input id="email-field" type="email" placeholder="your@email.here" name="_replyto" required/>
+                        <input id="name-field" type="text" placeholder="name (optional)" name="name"/>
+                        <input type="hidden" name="_subject" value="New Client!"/>
+                        <input type="hidden" name="_next" value="//arpanpal.in/" />
+                        <textarea id=message-field name="_message" placeholder="message" required></textarea>
+                        <input type="text" name="_gotcha" style="display: none;"/>
+                        <input id=submit-button type="submit" value="Send"/> 
+                    </form>
+                    </p>
+                </article>
 
             </section>
+
             <!--Footer-->
             <footer class="clear center">
                 <p>
@@ -265,7 +279,7 @@ less = {
             <script src="./js/scale.fix.js"></script>
             <script>
 //script to show alt text with a bit of delay - opacity and size changed
-function showAltOnHover(obj) {
+var showAltOnHover = function (obj) {
     obj.pd=obj.pd || "0.2em"; //obj.style.padding; //defaultvalue taken from css, adjust there if changed here
     obj.sc=obj.sc || obj.src;
     //alert(obj.sc);
@@ -285,7 +299,7 @@ function showAltOnHover(obj) {
     //alt text will show by itself
 }
 //script to show image with a bit of delay - opacity and size c.hanged
-function showImgOnMouseOut(obj) {
+var showImgOnMouseOut = function (obj) {
     //animation - timings must match with above
     obj.style.opacity="0";
     obj.style.filter="alpha(opacity=0)"; //IE<8
